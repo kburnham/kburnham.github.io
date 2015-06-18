@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h2>Opinions of USA & China in predominantly Muslim countries</h2>
+</head>
+<body>
+
+
+<div id="chartContainer">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
+
+
+  <script type="text/javascript">
+    //set dimension variables
+    var mainWidth = 1400
+    var mainHeight = 800
+
+    var svg = dimple.newSvg("#chartContainer", mainWidth, mainHeight);
+    d3.tsv("https://dl.dropboxusercontent.com/u/98843441/site/muslim.attitudes.to.USA.China.tsv", function (data) {
+
+
+      //get a unique list of questions
+      var questions = dimple.getUniqueValues(data, "Question");
+
+      //set the bounds for the charts
+      var row = 0,
+        col = 0,
+        top = 25,
+        left = 80,
+        inMarg = 70,
+        width =400,
+        height = 200,
+        totalWidth = parseFloat(svg.attr("width"));
+
+      //draw a chart for each of the 6 questions
+      questions.forEach(function (question) {
+        // if the next sunchart would go off the edge, move up a row
+        if (left + ((col + 1) * (width + inMarg)) > totalWidth) {
+          row += 1;
+          col = 0;
+        }
+
+        //set question text
+
+        switch (question) {
+          case "favorable":
+            var questionText = "Do you have a favorable opinion of USA/China?";
+            break;
+          case "threat":
+            var questionText = "Do you consider USA/China a threat to your country?";
+            break;
+          case "partner":
+            var questionText = "Do you consider USA/China a partner to your country?";
+            break;
+          case "interest":
+            var questionText = "Do you think USA/China considers the interests of countries like yours?";
+            break;
+          case "respect" :
+            var questionText = "Do you think China/USA respects the interests of its own people?";
+            break;
+          case "best":
+            var questionText = "Should your country follow the economic model of USA/China?";
+            break;
+
+        }
+
+        //extract the data corresponding to the current question
+        var chartData = dimple.filterData(data, "Question", question);
+
+        svg
+            .append("text")
+                .attr("x", left + (col * (width + inMarg)) + (width / 2))
+                .attr("y", top + (row * (height + inMarg)) - 15)
+                .style("font-family", "helvetica")
+                .style("text-anchor", "middle")
+                .style("font-size", "12px")
+                //.style("opacity", 0.2)
+                .text(questionText);
+
+        var myChart = new dimple.chart(svg, chartData);
+        myChart.setBounds(
+            left + (col * (width + inMarg)),
+            top + (row * (height + inMarg)),
+            width,
+            height);
+
+        myChart.defaultColors = [
+          new dimple.color("#3498db", "#2980b9", 1), // blue
+          new dimple.color("#e74c3c", "#c0392b", 1), // red
+          new dimple.color("#2ecc71", "#27ae60", 1), // green
+          new dimple.color("#9b59b6", "#8e44ad", 1), // purple
+          new dimple.color("#e67e22", "#d35400", 1), // orange
+          new dimple.color("#f1c40f", "#f39c12", 1), // yellow
+          new dimple.color("#1abc9c", "#16a085", 1), // turquoise
+          new dimple.color("#95a5a6", "#7f8c8d", 1)  // gray
+      ];
+
+        var x = myChart.addMeasureAxis("x", "avg.Score");
+        x.overrideMax = 100;
+
+        var y = myChart.addCategoryAxis("y", ["country", "USA.or.China"]);
+        y.addOrderRule(['Latin America', 'Europe', 'Tunisia', 'Jordan', 'Indonesia', 'Pakistan', 'Turkey', 'Egypt']);
+
+        myChart.addSeries("USA.or.China", dimple.plot.bar);
+
+        if (col == 0 & row == 0) {
+          myChart.addLegend(300,50,500,50);
+        }
+        
+
+        myChart.draw();
+
+        // Once drawn we can access the shapes
+        // If this is not in the first column remove the y text
+        if (col > 0) {
+          y.shapes.selectAll("text").remove();
+        }
+        // If this is not in the last row remove the x text
+        if (row < 2) {
+           x.shapes.selectAll("text").remove();
+        }
+
+        y.titleShape.remove();
+        x.titleShape.remove();
+
+        col += 1;
+     } , this)
+    });
+  </script>
+</div>
+<a href = "http://www.pewglobal.org/category/datasets/"><font size = "1" >Source: Pew Research Center - Global Attitudes and Trends - Spring 2013 Survey Data</font></a>
+<div>
+
+
+
+
+</div>
+
+</body>
+</html>

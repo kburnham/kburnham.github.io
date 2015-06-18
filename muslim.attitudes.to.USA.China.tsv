@@ -1,0 +1,97 @@
+""	"country"	"USA.or.China"	"Question"	"avg.Score"
+"1"	"Egypt"	"China"	"best"	19.9
+"2"	"Egypt"	"China"	"favorable"	44.3
+"3"	"Egypt"	"China"	"interest"	25.1
+"4"	"Egypt"	"China"	"partner"	28.5
+"5"	"Egypt"	"China"	"respect"	39
+"6"	"Egypt"	"China"	"threat"	51.5
+"7"	"Egypt"	"USA"	"best"	47.6
+"8"	"Egypt"	"USA"	"favorable"	16
+"9"	"Egypt"	"USA"	"interest"	15.6
+"10"	"Egypt"	"USA"	"partner"	18.6
+"11"	"Egypt"	"USA"	"respect"	45.2
+"12"	"Egypt"	"USA"	"threat"	73.9
+"13"	"Indonesia"	"China"	"best"	19.3
+"14"	"Indonesia"	"China"	"favorable"	70
+"15"	"Indonesia"	"China"	"interest"	53.4
+"16"	"Indonesia"	"China"	"partner"	53
+"17"	"Indonesia"	"China"	"respect"	59.3
+"18"	"Indonesia"	"China"	"threat"	64.5
+"19"	"Indonesia"	"USA"	"best"	36.5
+"20"	"Indonesia"	"USA"	"favorable"	61.3
+"21"	"Indonesia"	"USA"	"interest"	51.2
+"22"	"Indonesia"	"USA"	"partner"	46.2
+"23"	"Indonesia"	"USA"	"respect"	68.2
+"24"	"Indonesia"	"USA"	"threat"	72.5
+"25"	"Jordan"	"China"	"best"	21.4
+"26"	"Jordan"	"China"	"favorable"	39.7
+"27"	"Jordan"	"China"	"interest"	25.2
+"28"	"Jordan"	"China"	"partner"	47.6
+"29"	"Jordan"	"China"	"respect"	48.2
+"30"	"Jordan"	"China"	"threat"	39.5
+"31"	"Jordan"	"USA"	"best"	51.3
+"32"	"Jordan"	"USA"	"favorable"	13.3
+"33"	"Jordan"	"USA"	"interest"	18.6
+"34"	"Jordan"	"USA"	"partner"	15.1
+"35"	"Jordan"	"USA"	"respect"	48.5
+"36"	"Jordan"	"USA"	"threat"	54.3
+"37"	"Pakistan"	"China"	"best"	18.9009159034138
+"38"	"Pakistan"	"China"	"favorable"	80.6827643630308
+"39"	"Pakistan"	"China"	"interest"	48.8759367194005
+"40"	"Pakistan"	"China"	"partner"	80.0166527893422
+"41"	"Pakistan"	"China"	"respect"	59.8667776852623
+"42"	"Pakistan"	"China"	"threat"	12.4895920066611
+"43"	"Pakistan"	"USA"	"best"	28.2264779350541
+"44"	"Pakistan"	"USA"	"favorable"	12.2398001665279
+"45"	"Pakistan"	"USA"	"interest"	14.4046627810158
+"46"	"Pakistan"	"USA"	"partner"	7.49375520399667
+"47"	"Pakistan"	"USA"	"respect"	47.8767693588676
+"48"	"Pakistan"	"USA"	"threat"	72.5228975853456
+"49"	"Tunisia"	"China"	"best"	44.2
+"50"	"Tunisia"	"China"	"favorable"	61.6
+"51"	"Tunisia"	"China"	"interest"	27.1
+"52"	"Tunisia"	"China"	"partner"	52
+"53"	"Tunisia"	"China"	"respect"	51.5
+"54"	"Tunisia"	"China"	"threat"	33.9
+"55"	"Tunisia"	"USA"	"best"	30.2
+"56"	"Tunisia"	"USA"	"favorable"	41.4
+"57"	"Tunisia"	"USA"	"interest"	23.4
+"58"	"Tunisia"	"USA"	"partner"	35.6
+"59"	"Tunisia"	"USA"	"respect"	62.7
+"60"	"Tunisia"	"USA"	"threat"	54.7
+"61"	"Turkey"	"China"	"best"	23.8
+"62"	"Turkey"	"China"	"favorable"	24.9
+"63"	"Turkey"	"China"	"interest"	19
+"64"	"Turkey"	"China"	"partner"	15.7
+"65"	"Turkey"	"China"	"respect"	23.5
+"66"	"Turkey"	"China"	"threat"	50.1
+"67"	"Turkey"	"USA"	"best"	40.1
+"68"	"Turkey"	"USA"	"favorable"	20.2
+"69"	"Turkey"	"USA"	"interest"	21.3
+"70"	"Turkey"	"USA"	"partner"	14.7
+"71"	"Turkey"	"USA"	"respect"	49.7
+"72"	"Turkey"	"USA"	"threat"	77
+"73"	"Europe"	"China"	"best"	5.5311270539227
+"74"	"Europe"	"China"	"favorable"	43.6241610738255
+"75"	"Europe"	"China"	"interest"	19.6482295764869
+"76"	"Europe"	"China"	"partner"	27.0886368896089
+"77"	"Europe"	"China"	"respect"	16.3040962740106
+"78"	"Europe"	"China"	"threat"	74.6586438324462
+"79"	"Europe"	"USA"	"best"	7.55612126822495
+"80"	"Europe"	"USA"	"favorable"	59.1529738486462
+"81"	"Europe"	"USA"	"interest"	31.7403378847489
+"82"	"Europe"	"USA"	"partner"	54.6169868086091
+"83"	"Europe"	"USA"	"respect"	74.380930340199
+"84"	"Europe"	"USA"	"threat"	59.5926868780375
+"85"	"Latin America"	"China"	"best"	19.8671204018798
+"86"	"Latin America"	"China"	"favorable"	58.1915410792416
+"87"	"Latin America"	"China"	"interest"	39.2967104197051
+"88"	"Latin America"	"China"	"partner"	54.5940690325717
+"89"	"Latin America"	"China"	"respect"	35.4237562793713
+"90"	"Latin America"	"China"	"threat"	47.8204504942473
+"91"	"Latin America"	"USA"	"best"	54.6264786906498
+"92"	"Latin America"	"USA"	"favorable"	62.3399773132394
+"93"	"Latin America"	"USA"	"interest"	45.0980392156863
+"94"	"Latin America"	"USA"	"partner"	54.1241289904391
+"95"	"Latin America"	"USA"	"respect"	61.8700372711068
+"96"	"Latin America"	"USA"	"threat"	56.0687084751256
