@@ -14,20 +14,21 @@
     
     rect.dimple-bar {
       
-      fill: purple;
-      stroke: green;
-      opacity: 5;
+      
+      
+      
     }
-  </style> -->
+  </style>
 
+-->
 
   <script type="text/javascript">
     //set dimension variables
     var mainWidth = 1400
-    var mainHeight = 800
+    var mainHeight = 1000
 
     var svg = dimple.newSvg("#chartContainer", mainWidth, mainHeight);
-    d3.tsv("https://dl.dropboxusercontent.com/u/98843441/site/muslim.attitudes.to.USA.China.tsv", function (data) {
+    d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
 
 
       //get a unique list of questions
@@ -40,7 +41,7 @@
         left = 80,
         inMarg = 70,
         width =400,
-        height = 200,
+        height = 250,
         totalWidth = parseFloat(svg.attr("width"));
 
       //draw a chart for each of the 6 questions
@@ -51,11 +52,16 @@
           col = 0;
         }
 
+        //set list of countries to include, the chart is  noisy, so we remove Jordan, a very small country
+        data = dimple.filterData(data, "country", ["Egypt", "Indonesia", "Turkey", "Pakistan", 
+                     "Tunisia", "Latin America", "Europe"]);
+
+
         //set question text
 
         switch (question) {
           case "favorable":
-            var questionText = "Do you have a favorable opinion of USA/China?";
+            var questionText1 = "Do you have a favorable opinion of USA/China?";
             break;
           case "threat":
             var questionText = "Do you consider USA/China a threat to your country?";
@@ -67,7 +73,7 @@
             var questionText = "Do you think USA/China considers the interests of countries like yours?";
             break;
           case "respect" :
-            var questionText = "Do you think China/USA respects the interests of its own people?";
+            var questionText = "Do you think USA/China respects the interests of its own people?";
             break;
           case "best":
             var questionText = "Should your country follow the economic model of USA/China?";
@@ -98,18 +104,21 @@
       
 
         var x = myChart.addMeasureAxis("x", "avg.Score");
-        x.overrideMax = 100;
+        x.overrideMax = 1;
+        x.showGridlines = false;
+        x.tickFormat = "%";
 
         var y = myChart.addCategoryAxis("y", ["country", "USA.or.China"]);
-        y.addOrderRule(['Latin America', 'Europe', 'Tunisia', 'Jordan', 'Indonesia', 'Pakistan', 'Turkey', 'Egypt']);
+        y.addOrderRule(['Latin America', 'Europe', 'Tunisia', 'Indonesia', 'Pakistan', 'Turkey', 'Egypt']);
         y.addGroupOrderRule(["China", "USA"]);
 
         var s = myChart.addSeries(["avg.Score", "country", "USA.or.China"], dimple.plot.bar);
         s.addOrderRule(["USA.or.China"])
 
         myChart.defaultColors = [
-          new dimple.color("#e74c3c", "#c0392b", 1), // red
-          new dimple.color("#3498db", "#2980b9", 1), // blue
+        new dimple.color("#F15854", "#F15854", 1), // red
+        new dimple.color("#5DA5DA", "#5DA5DA", 1), // blue
+          
           
         ];
 
@@ -125,7 +134,7 @@
                     "Country: " + e.aggField[1],
                     
                     "Regarding: " + e.aggField[2],
-                    Math.round(e.aggField[0]) + "%"
+                    Math.round(e.aggField[0] * 100) + "%" //display % in 2 digits (e.g. 53%)
 
                 ];
             };
@@ -140,12 +149,14 @@
           y.shapes.selectAll("text").remove();
         }
         // If this is not in the last row remove the x text
-        if (row < 2) {
+        if (row == 1) {
            x.shapes.selectAll("text").remove();
         }
 
         y.titleShape.remove();
         x.titleShape.remove();
+
+
 
         col += 1;
      } , this)
