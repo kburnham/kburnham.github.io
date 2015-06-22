@@ -1,27 +1,9 @@
   <!DOCTYPE html>
 <html>
 <head>
-<h2>Opinions of USA & China</h2>
+<h2>Opinions of USA & China in predominantly Muslim countries</h2>
 </head>
 <body>
-
-<div>
-   <form id = "countrySelector">
-Germany:<br>
-<input type="checkbox" name="germany">
-<br>
-Egypt:<br>
-<input type="checkbox" name="egypt">
-<br>
-France:<br>
-<input type="checkbox" name="france">
-</form> 
-
-  <script type="text/javascript">
-  var countriesToInclude = ["Germany", "France", "Egypt"];
-  
-  </script>
-</div>
 
 
 <div id="chartContainer">
@@ -30,24 +12,12 @@ France:<br>
 
 
   <script type="text/javascript">
-
-
     //set dimension variables
     var mainWidth = 1400
     var mainHeight = 1000
 
     var svg = dimple.newSvg("#chartContainer", mainWidth, mainHeight);
     d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
-
-      //I want to display a list of all countries in the data
-      //and give the user an opportunity to choose which countries to include
-      all_countries = dimple.getUniqueValues(data, "country");
-
-      countries_to_include = ["Indonesia", "Turkey", "Pakistan", 
-                     "Tunisia", "Venezuela", "Germany"];
-      
-
-      data = dimple.filterData(data, "country", countriesToInclude);
 
 
       //get a unique list of questions
@@ -71,10 +41,9 @@ France:<br>
           col = 0;
         }
 
-        //list of countries to include
-        //I need some way to make this interactive
-
-
+        //set list of countries to include, the chart is  noisy, so we remove Jordan, a very small country
+        data = dimple.filterData(data, "country", ["Egypt", "Indonesia", "Turkey", "Pakistan", 
+                     "Tunisia", "Jordan"]);
 
 
         //set question text
@@ -183,8 +152,6 @@ France:<br>
     });
   </script>
 </div>
-<a href = "https://dl.dropboxusercontent.com/u/98843441/site/Pew_summary.pdf"><font size = "1" >Notes on methodology</font></a>
-<p>
 <a href = "http://www.pewglobal.org/category/datasets/"><font size = "1" >Source: Pew Research Center - Global Attitudes and Trends - Spring 2013 Survey Data</font></a>
 <div>
 
