@@ -1,14 +1,32 @@
   <!DOCTYPE html>
 <html>
 <head>
-<h2>Opinions of USA & China in predominantly Muslim countries</h2>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type='text/javascript' src='/countrySelector.js'></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
+        
+    <title>Opinions of USA/China throughout the world</title>
 </head>
 <body>
 
 
+    <div id="countries">
+  
+      <form action="#" id="countryChooser">
+        
+
+      </form>
+      <br>
+      <br>
+    </div>
+
+  
+
+
 <div id="chartContainer">
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
+  <!--<script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>-->
 
 
   <script type="text/javascript">
@@ -41,7 +59,7 @@
           col = 0;
         }
         var countriesToInclude = ["Egypt", "Indonesia", "Turkey", "Pakistan", 
-                     "Tunisia", "Bolivia", "Canada"];
+                     "Tunisia", "Bolivia", "Russia"];
         //set list of countries to include, the chart is  noisy, so we remove Jordan, a very small country
         data = dimple.filterData(data, "country", countriesToInclude);
 
