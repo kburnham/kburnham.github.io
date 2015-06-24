@@ -83,387 +83,363 @@
 "82"	"Chile"	"USA"	"partner"	0.63
 "83"	"Chile"	"USA"	"respect"	0.6625
 "84"	"Chile"	"USA"	"threat"	0.545
-"85"	"China"	"China"	"best"	0
-"86"	"China"	"China"	"favorable"	0.957222566646001
-"87"	"China"	"China"	"interest"	0
-"88"	"China"	"China"	"partner"	0
-"89"	"China"	"China"	"respect"	0
-"90"	"China"	"China"	"threat"	0.527278363298202
-"91"	"China"	"USA"	"best"	0
-"92"	"China"	"USA"	"favorable"	0.411965282083075
-"93"	"China"	"USA"	"interest"	0.487600743955363
-"94"	"China"	"USA"	"partner"	0
-"95"	"China"	"USA"	"respect"	0.486670799752015
-"96"	"China"	"USA"	"threat"	0.787042777433354
-"97"	"Czech Republic"	"China"	"best"	0
-"98"	"Czech Republic"	"China"	"favorable"	0.341428571428571
-"99"	"Czech Republic"	"China"	"interest"	0.175714285714286
-"100"	"Czech Republic"	"China"	"partner"	0.297142857142857
-"101"	"Czech Republic"	"China"	"respect"	0.117142857142857
-"102"	"Czech Republic"	"China"	"threat"	0.754285714285714
-"103"	"Czech Republic"	"USA"	"best"	0
-"104"	"Czech Republic"	"USA"	"favorable"	0.582857142857143
-"105"	"Czech Republic"	"USA"	"interest"	0.3
-"106"	"Czech Republic"	"USA"	"partner"	0.568571428571429
-"107"	"Czech Republic"	"USA"	"respect"	0.782857142857143
-"108"	"Czech Republic"	"USA"	"threat"	0.592857142857143
-"109"	"Egypt"	"China"	"best"	0.199
-"110"	"Egypt"	"China"	"favorable"	0.443
-"111"	"Egypt"	"China"	"interest"	0.251
-"112"	"Egypt"	"China"	"partner"	0.285
-"113"	"Egypt"	"China"	"respect"	0.39
-"114"	"Egypt"	"China"	"threat"	0.515
-"115"	"Egypt"	"USA"	"best"	0.476
-"116"	"Egypt"	"USA"	"favorable"	0.16
-"117"	"Egypt"	"USA"	"interest"	0.156
-"118"	"Egypt"	"USA"	"partner"	0.186
-"119"	"Egypt"	"USA"	"respect"	0.452
-"120"	"Egypt"	"USA"	"threat"	0.739
-"121"	"El Salvador"	"China"	"best"	0.119949494949495
-"122"	"El Salvador"	"China"	"favorable"	0.515151515151515
-"123"	"El Salvador"	"China"	"interest"	0.482323232323232
-"124"	"El Salvador"	"China"	"partner"	0.592171717171717
-"125"	"El Salvador"	"China"	"respect"	0.400252525252525
-"126"	"El Salvador"	"China"	"threat"	0.375
-"127"	"El Salvador"	"USA"	"best"	0.777777777777778
-"128"	"El Salvador"	"USA"	"favorable"	0.794191919191919
-"129"	"El Salvador"	"USA"	"interest"	0.698232323232323
-"130"	"El Salvador"	"USA"	"partner"	0.882575757575758
-"131"	"El Salvador"	"USA"	"respect"	0.810606060606061
-"132"	"El Salvador"	"USA"	"threat"	0.301767676767677
-"133"	"France"	"China"	"best"	0
-"134"	"France"	"China"	"favorable"	0.422310756972112
-"135"	"France"	"China"	"interest"	0.136454183266932
-"136"	"France"	"China"	"partner"	0.207171314741036
-"137"	"France"	"China"	"respect"	0.107569721115538
-"138"	"France"	"China"	"threat"	0.794820717131474
-"139"	"France"	"USA"	"best"	0
-"140"	"France"	"USA"	"favorable"	0.644422310756972
-"141"	"France"	"USA"	"interest"	0.299800796812749
-"142"	"France"	"USA"	"partner"	0.698207171314741
-"143"	"France"	"USA"	"respect"	0.814741035856574
-"144"	"France"	"USA"	"threat"	0.559760956175299
-"145"	"Germany"	"China"	"best"	0
-"146"	"Germany"	"China"	"favorable"	0.268292682926829
-"147"	"Germany"	"China"	"interest"	0.202926829268293
-"148"	"Germany"	"China"	"partner"	0.274146341463415
-"149"	"Germany"	"China"	"respect"	0.055609756097561
-"150"	"Germany"	"China"	"threat"	0.846829268292683
-"151"	"Germany"	"USA"	"best"	0
-"152"	"Germany"	"USA"	"favorable"	0.528780487804878
-"153"	"Germany"	"USA"	"interest"	0.444878048780488
-"154"	"Germany"	"USA"	"partner"	0.746341463414634
-"155"	"Germany"	"USA"	"respect"	0.806829268292683
-"156"	"Germany"	"USA"	"threat"	0.67609756097561
-"157"	"Ghana"	"China"	"best"	0.272841051314143
-"158"	"Ghana"	"China"	"favorable"	0.685857321652065
-"159"	"Ghana"	"China"	"interest"	0.578222778473091
-"160"	"Ghana"	"China"	"partner"	0.703379224030037
-"161"	"Ghana"	"China"	"respect"	0.504380475594493
-"162"	"Ghana"	"China"	"threat"	0.591989987484355
-"163"	"Ghana"	"USA"	"best"	0.553191489361702
-"164"	"Ghana"	"USA"	"favorable"	0.846057571964956
-"165"	"Ghana"	"USA"	"interest"	0.607008760951189
-"166"	"Ghana"	"USA"	"partner"	0.757196495619524
-"167"	"Ghana"	"USA"	"respect"	0.712140175219024
-"168"	"Ghana"	"USA"	"threat"	0.311639549436796
-"169"	"Greece"	"China"	"best"	0
-"170"	"Greece"	"China"	"favorable"	0.587
-"171"	"Greece"	"China"	"interest"	0.25
-"172"	"Greece"	"China"	"partner"	0.361
-"173"	"Greece"	"China"	"respect"	0.247
-"174"	"Greece"	"China"	"threat"	0.56
-"175"	"Greece"	"USA"	"best"	0
-"176"	"Greece"	"USA"	"favorable"	0.391
-"177"	"Greece"	"USA"	"interest"	0.195
-"178"	"Greece"	"USA"	"partner"	0.296
-"179"	"Greece"	"USA"	"respect"	0.582
-"180"	"Greece"	"USA"	"threat"	0.65
-"181"	"Indonesia"	"China"	"best"	0.193
-"182"	"Indonesia"	"China"	"favorable"	0.7
-"183"	"Indonesia"	"China"	"interest"	0.534
-"184"	"Indonesia"	"China"	"partner"	0.53
-"185"	"Indonesia"	"China"	"respect"	0.593
-"186"	"Indonesia"	"China"	"threat"	0.645
-"187"	"Indonesia"	"USA"	"best"	0.365
-"188"	"Indonesia"	"USA"	"favorable"	0.613
-"189"	"Indonesia"	"USA"	"interest"	0.512
-"190"	"Indonesia"	"USA"	"partner"	0.462
-"191"	"Indonesia"	"USA"	"respect"	0.682
-"192"	"Indonesia"	"USA"	"threat"	0.725
-"193"	"Israel"	"China"	"best"	0
-"194"	"Israel"	"China"	"favorable"	0.507592190889371
-"195"	"Israel"	"China"	"interest"	0.204989154013015
-"196"	"Israel"	"China"	"partner"	0.162689804772234
-"197"	"Israel"	"China"	"respect"	0.342733188720174
-"198"	"Israel"	"China"	"threat"	0.488069414316703
-"199"	"Israel"	"USA"	"best"	0
-"200"	"Israel"	"USA"	"favorable"	0.683297180043384
-"201"	"Israel"	"USA"	"interest"	0.758134490238612
-"202"	"Israel"	"USA"	"partner"	0.898047722342733
-"203"	"Israel"	"USA"	"respect"	0.797180043383948
-"204"	"Israel"	"USA"	"threat"	0.275488069414317
-"205"	"Italy"	"China"	"best"	0
-"206"	"Italy"	"China"	"favorable"	0.300452488687783
-"207"	"Italy"	"China"	"interest"	0.107692307692308
-"208"	"Italy"	"China"	"partner"	0.123076923076923
-"209"	"Italy"	"China"	"respect"	0.0714932126696833
-"210"	"Italy"	"China"	"threat"	0.810859728506787
-"211"	"Italy"	"USA"	"best"	0
-"212"	"Italy"	"USA"	"favorable"	0.781900452488688
-"213"	"Italy"	"USA"	"interest"	0.418099547511312
-"214"	"Italy"	"USA"	"partner"	0.678733031674208
-"215"	"Italy"	"USA"	"respect"	0.836199095022624
-"216"	"Italy"	"USA"	"threat"	0.379185520361991
-"217"	"Japan"	"China"	"best"	0
-"218"	"Japan"	"China"	"favorable"	0.0571428571428571
-"219"	"Japan"	"China"	"interest"	0.0814285714285714
-"220"	"Japan"	"China"	"partner"	0.114285714285714
-"221"	"Japan"	"China"	"respect"	0.0471428571428571
-"222"	"Japan"	"China"	"threat"	0.921428571428571
-"223"	"Japan"	"USA"	"best"	0
-"224"	"Japan"	"USA"	"favorable"	0.712857142857143
-"225"	"Japan"	"USA"	"interest"	0.382857142857143
-"226"	"Japan"	"USA"	"partner"	0.771428571428571
-"227"	"Japan"	"USA"	"respect"	0.857142857142857
-"228"	"Japan"	"USA"	"threat"	0.832857142857143
-"229"	"Jordan"	"China"	"best"	0.214
-"230"	"Jordan"	"China"	"favorable"	0.397
-"231"	"Jordan"	"China"	"interest"	0.252
-"232"	"Jordan"	"China"	"partner"	0.476
-"233"	"Jordan"	"China"	"respect"	0.482
-"234"	"Jordan"	"China"	"threat"	0.395
-"235"	"Jordan"	"USA"	"best"	0.513
-"236"	"Jordan"	"USA"	"favorable"	0.133
-"237"	"Jordan"	"USA"	"interest"	0.186
-"238"	"Jordan"	"USA"	"partner"	0.151
-"239"	"Jordan"	"USA"	"respect"	0.485
-"240"	"Jordan"	"USA"	"threat"	0.543
-"241"	"Kenya"	"China"	"best"	0.367167919799499
-"242"	"Kenya"	"China"	"favorable"	0.784461152882206
-"243"	"Kenya"	"China"	"interest"	0.771929824561403
-"244"	"Kenya"	"China"	"partner"	0.769423558897243
-"245"	"Kenya"	"China"	"respect"	0.521303258145363
-"246"	"Kenya"	"China"	"threat"	0.703007518796993
-"247"	"Kenya"	"USA"	"best"	0.578947368421053
-"248"	"Kenya"	"USA"	"favorable"	0.805764411027569
-"249"	"Kenya"	"USA"	"interest"	0.791979949874687
-"250"	"Kenya"	"USA"	"partner"	0.789473684210526
-"251"	"Kenya"	"USA"	"respect"	0.734335839598998
-"252"	"Kenya"	"USA"	"threat"	0.62406015037594
-"253"	"Lebanon"	"China"	"best"	0.281
-"254"	"Lebanon"	"China"	"favorable"	0.559
-"255"	"Lebanon"	"China"	"interest"	0.453
-"256"	"Lebanon"	"China"	"partner"	0.362
-"257"	"Lebanon"	"China"	"respect"	0.681
-"258"	"Lebanon"	"China"	"threat"	0.467
-"259"	"Lebanon"	"USA"	"best"	0.393
-"260"	"Lebanon"	"USA"	"favorable"	0.467
-"261"	"Lebanon"	"USA"	"interest"	0.265
-"262"	"Lebanon"	"USA"	"partner"	0.377
-"263"	"Lebanon"	"USA"	"respect"	0.865
-"264"	"Lebanon"	"USA"	"threat"	0.674
-"265"	"Malaysia"	"China"	"best"	0.208029197080292
-"266"	"Malaysia"	"China"	"favorable"	0.81021897810219
-"267"	"Malaysia"	"China"	"interest"	0.509732360097324
-"268"	"Malaysia"	"China"	"partner"	0.761557177615572
-"269"	"Malaysia"	"China"	"respect"	0.568126520681265
-"270"	"Malaysia"	"China"	"threat"	0.615571776155718
-"271"	"Malaysia"	"USA"	"best"	0.319951338199513
-"272"	"Malaysia"	"USA"	"favorable"	0.535279805352798
-"273"	"Malaysia"	"USA"	"interest"	0.355231143552311
-"274"	"Malaysia"	"USA"	"partner"	0.570559610705596
-"275"	"Malaysia"	"USA"	"respect"	0.627737226277372
-"276"	"Malaysia"	"USA"	"threat"	0.706812652068126
-"277"	"Mexico"	"China"	"best"	0.184
-"278"	"Mexico"	"China"	"favorable"	0.447
-"279"	"Mexico"	"China"	"interest"	0.403
-"280"	"Mexico"	"China"	"partner"	0.417
-"281"	"Mexico"	"China"	"respect"	0.338
-"282"	"Mexico"	"China"	"threat"	0.648
-"283"	"Mexico"	"USA"	"best"	0.567
-"284"	"Mexico"	"USA"	"favorable"	0.663
-"285"	"Mexico"	"USA"	"interest"	0.52
-"286"	"Mexico"	"USA"	"partner"	0.597
-"287"	"Mexico"	"USA"	"respect"	0.555
-"288"	"Mexico"	"USA"	"threat"	0.696
-"289"	"Nigeria"	"China"	"best"	0.180407371483996
-"290"	"Nigeria"	"China"	"favorable"	0.772065955383123
-"291"	"Nigeria"	"China"	"interest"	0.684772065955383
-"292"	"Nigeria"	"China"	"partner"	0.718719689621726
-"293"	"Nigeria"	"China"	"respect"	0.618816682832202
-"294"	"Nigeria"	"China"	"threat"	0.297769156159069
-"295"	"Nigeria"	"USA"	"best"	0.542192046556741
-"296"	"Nigeria"	"USA"	"favorable"	0.718719689621726
-"297"	"Nigeria"	"USA"	"interest"	0.618816682832202
-"298"	"Nigeria"	"USA"	"partner"	0.632395732298739
-"299"	"Nigeria"	"USA"	"respect"	0.716779825412221
-"300"	"Nigeria"	"USA"	"threat"	0.377303588748788
-"301"	"Pakistan"	"China"	"best"	0.189009159034138
-"302"	"Pakistan"	"China"	"favorable"	0.806827643630308
-"303"	"Pakistan"	"China"	"interest"	0.488759367194005
-"304"	"Pakistan"	"China"	"partner"	0.800166527893422
-"305"	"Pakistan"	"China"	"respect"	0.598667776852623
-"306"	"Pakistan"	"China"	"threat"	0.124895920066611
-"307"	"Pakistan"	"USA"	"best"	0.282264779350541
-"308"	"Pakistan"	"USA"	"favorable"	0.122398001665279
-"309"	"Pakistan"	"USA"	"interest"	0.144046627810158
-"310"	"Pakistan"	"USA"	"partner"	0.0749375520399667
-"311"	"Pakistan"	"USA"	"respect"	0.478767693588676
-"312"	"Pakistan"	"USA"	"threat"	0.725228975853455
-"313"	"Palestinian territories"	"China"	"best"	0.269135802469136
-"314"	"Palestinian territories"	"China"	"favorable"	0.475308641975309
-"315"	"Palestinian territories"	"China"	"interest"	0.191358024691358
-"316"	"Palestinian territories"	"China"	"partner"	0.258024691358025
-"317"	"Palestinian territories"	"China"	"respect"	0.582716049382716
-"318"	"Palestinian territories"	"China"	"threat"	0.353086419753086
-"319"	"Palestinian territories"	"USA"	"best"	0.275308641975309
-"320"	"Palestinian territories"	"USA"	"favorable"	0.160493827160494
-"321"	"Palestinian territories"	"USA"	"interest"	0.151851851851852
-"322"	"Palestinian territories"	"USA"	"partner"	0.037037037037037
-"323"	"Palestinian territories"	"USA"	"respect"	0.671604938271605
-"324"	"Palestinian territories"	"USA"	"threat"	0.854320987654321
-"325"	"Philippines"	"China"	"best"	0.615671641791045
-"326"	"Philippines"	"China"	"favorable"	0.478855721393035
-"327"	"Philippines"	"China"	"interest"	0.584577114427861
-"328"	"Philippines"	"China"	"partner"	0.222636815920398
-"329"	"Philippines"	"China"	"respect"	0.508706467661692
-"330"	"Philippines"	"China"	"threat"	0.870646766169154
-"331"	"Philippines"	"USA"	"best"	0.369402985074627
-"332"	"Philippines"	"USA"	"favorable"	0.850746268656716
-"333"	"Philippines"	"USA"	"interest"	0.855721393034826
-"334"	"Philippines"	"USA"	"partner"	0.814676616915423
-"335"	"Philippines"	"USA"	"respect"	0.907960199004975
-"336"	"Philippines"	"USA"	"threat"	0.623134328358209
-"337"	"Poland"	"China"	"best"	0.205
-"338"	"Poland"	"China"	"favorable"	0.4225
-"339"	"Poland"	"China"	"interest"	0.26625
-"340"	"Poland"	"China"	"partner"	0.2475
-"341"	"Poland"	"China"	"respect"	0.14
-"342"	"Poland"	"China"	"threat"	0.76125
-"343"	"Poland"	"USA"	"best"	0.5275
-"344"	"Poland"	"USA"	"favorable"	0.67375
-"345"	"Poland"	"USA"	"interest"	0.33
-"346"	"Poland"	"USA"	"partner"	0.40125
-"347"	"Poland"	"USA"	"respect"	0.75625
-"348"	"Poland"	"USA"	"threat"	0.58625
-"349"	"Russia"	"China"	"best"	0.315261044176707
-"350"	"Russia"	"China"	"favorable"	0.635542168674699
-"351"	"Russia"	"China"	"interest"	0.394578313253012
-"352"	"Russia"	"China"	"partner"	0.525100401606426
-"353"	"Russia"	"China"	"respect"	0.468875502008032
-"354"	"Russia"	"China"	"threat"	0.672690763052209
-"355"	"Russia"	"USA"	"best"	0.231927710843373
-"356"	"Russia"	"USA"	"favorable"	0.521084337349398
-"357"	"Russia"	"USA"	"interest"	0.264056224899598
-"358"	"Russia"	"USA"	"partner"	0.31425702811245
-"359"	"Russia"	"USA"	"respect"	0.677710843373494
-"360"	"Russia"	"USA"	"threat"	0.759036144578313
-"361"	"Senegal"	"China"	"best"	0.3175
-"362"	"Senegal"	"China"	"favorable"	0.76875
-"363"	"Senegal"	"China"	"interest"	0.61625
-"364"	"Senegal"	"China"	"partner"	0.7775
-"365"	"Senegal"	"China"	"respect"	0.585
-"366"	"Senegal"	"China"	"threat"	0.36625
-"367"	"Senegal"	"USA"	"best"	0.505
-"368"	"Senegal"	"USA"	"favorable"	0.81
-"369"	"Senegal"	"USA"	"interest"	0.67375
-"370"	"Senegal"	"USA"	"partner"	0.83875
-"371"	"Senegal"	"USA"	"respect"	0.71625
-"372"	"Senegal"	"USA"	"threat"	0.3325
-"373"	"South Africa"	"China"	"best"	0.25398773006135
-"374"	"South Africa"	"China"	"favorable"	0.478527607361963
-"375"	"South Africa"	"China"	"interest"	0.663803680981595
-"376"	"South Africa"	"China"	"partner"	0.507975460122699
-"377"	"South Africa"	"China"	"respect"	0.442944785276074
-"378"	"South Africa"	"China"	"threat"	0.626993865030675
-"379"	"South Africa"	"USA"	"best"	0.452760736196319
-"380"	"South Africa"	"USA"	"favorable"	0.725153374233129
-"381"	"South Africa"	"USA"	"interest"	0.72760736196319
-"382"	"South Africa"	"USA"	"partner"	0.587730061349693
-"383"	"South Africa"	"USA"	"respect"	0.696932515337423
-"384"	"South Africa"	"USA"	"threat"	0.525153374233129
-"385"	"South Korea"	"China"	"best"	0
-"386"	"South Korea"	"China"	"favorable"	0.488257107540173
-"387"	"South Korea"	"China"	"interest"	0.173053152039555
-"388"	"South Korea"	"China"	"partner"	0.281829419035847
-"389"	"South Korea"	"China"	"respect"	0.245982694684796
-"390"	"South Korea"	"China"	"threat"	0.925834363411619
-"391"	"South Korea"	"USA"	"best"	0
-"392"	"South Korea"	"USA"	"favorable"	0.792336217552534
-"393"	"South Korea"	"USA"	"interest"	0.351050679851669
-"394"	"South Korea"	"USA"	"partner"	0.703337453646477
-"395"	"South Korea"	"USA"	"respect"	0.904820766378245
-"396"	"South Korea"	"USA"	"threat"	0.838071693448702
-"397"	"Spain"	"China"	"best"	0
-"398"	"Spain"	"China"	"favorable"	0.473
-"399"	"Spain"	"China"	"interest"	0.116
-"400"	"Spain"	"China"	"partner"	0.247
-"401"	"Spain"	"China"	"respect"	0.107
-"402"	"Spain"	"China"	"threat"	0.788
-"403"	"Spain"	"USA"	"best"	0
-"404"	"Spain"	"USA"	"favorable"	0.62
-"405"	"Spain"	"USA"	"interest"	0.19
-"406"	"Spain"	"USA"	"partner"	0.542
-"407"	"Spain"	"USA"	"respect"	0.694
-"408"	"Spain"	"USA"	"threat"	0.583
-"409"	"Tunisia"	"China"	"best"	0.442
-"410"	"Tunisia"	"China"	"favorable"	0.616
-"411"	"Tunisia"	"China"	"interest"	0.271
-"412"	"Tunisia"	"China"	"partner"	0.52
-"413"	"Tunisia"	"China"	"respect"	0.515
-"414"	"Tunisia"	"China"	"threat"	0.339
-"415"	"Tunisia"	"USA"	"best"	0.302
-"416"	"Tunisia"	"USA"	"favorable"	0.414
-"417"	"Tunisia"	"USA"	"interest"	0.234
-"418"	"Tunisia"	"USA"	"partner"	0.356
-"419"	"Tunisia"	"USA"	"respect"	0.627
-"420"	"Tunisia"	"USA"	"threat"	0.547
-"421"	"Turkey"	"China"	"best"	0.238
-"422"	"Turkey"	"China"	"favorable"	0.249
-"423"	"Turkey"	"China"	"interest"	0.19
-"424"	"Turkey"	"China"	"partner"	0.157
-"425"	"Turkey"	"China"	"respect"	0.235
-"426"	"Turkey"	"China"	"threat"	0.501
-"427"	"Turkey"	"USA"	"best"	0.401
-"428"	"Turkey"	"USA"	"favorable"	0.202
-"429"	"Turkey"	"USA"	"interest"	0.213
-"430"	"Turkey"	"USA"	"partner"	0.147
-"431"	"Turkey"	"USA"	"respect"	0.497
-"432"	"Turkey"	"USA"	"threat"	0.77
-"433"	"Uganda"	"China"	"best"	0.3275
-"434"	"Uganda"	"China"	"favorable"	0.58625
-"435"	"Uganda"	"China"	"interest"	0.4975
-"436"	"Uganda"	"China"	"partner"	0.57875
-"437"	"Uganda"	"China"	"respect"	0.47125
-"438"	"Uganda"	"China"	"threat"	0.48375
-"439"	"Uganda"	"USA"	"best"	0.4925
-"440"	"Uganda"	"USA"	"favorable"	0.7275
-"441"	"Uganda"	"USA"	"interest"	0.62125
-"442"	"Uganda"	"USA"	"partner"	0.70375
-"443"	"Uganda"	"USA"	"respect"	0.7025
-"444"	"Uganda"	"USA"	"threat"	0.51125
-"445"	"United States"	"China"	"best"	0
-"446"	"United States"	"China"	"favorable"	0.333333333333333
-"447"	"United States"	"China"	"interest"	0.334331337325349
-"448"	"United States"	"China"	"partner"	0.18562874251497
-"449"	"United States"	"China"	"respect"	0.148702594810379
-"450"	"United States"	"China"	"threat"	0.833333333333333
-"451"	"United States"	"USA"	"best"	0
-"452"	"United States"	"USA"	"favorable"	0.820359281437126
-"453"	"United States"	"USA"	"interest"	0
-"454"	"United States"	"USA"	"partner"	0
-"455"	"United States"	"USA"	"respect"	0.706586826347305
-"456"	"United States"	"USA"	"threat"	0.570858283433134
-"457"	"Venezuela"	"China"	"best"	0.238
-"458"	"Venezuela"	"China"	"favorable"	0.708
-"459"	"Venezuela"	"China"	"interest"	0.666
-"460"	"Venezuela"	"China"	"partner"	0.736
-"461"	"Venezuela"	"China"	"respect"	0.519
-"462"	"Venezuela"	"China"	"threat"	0.32
-"463"	"Venezuela"	"USA"	"best"	0.517
-"464"	"Venezuela"	"USA"	"favorable"	0.528
-"465"	"Venezuela"	"USA"	"interest"	0.503
-"466"	"Venezuela"	"USA"	"partner"	0.364
-"467"	"Venezuela"	"USA"	"respect"	0.526
-"468"	"Venezuela"	"USA"	"threat"	0.551
+"85"	"Czech Republic"	"China"	"best"	0
+"86"	"Czech Republic"	"China"	"favorable"	0.341428571428571
+"87"	"Czech Republic"	"China"	"interest"	0.175714285714286
+"88"	"Czech Republic"	"China"	"partner"	0.297142857142857
+"89"	"Czech Republic"	"China"	"respect"	0.117142857142857
+"90"	"Czech Republic"	"China"	"threat"	0.754285714285714
+"91"	"Czech Republic"	"USA"	"best"	0
+"92"	"Czech Republic"	"USA"	"favorable"	0.582857142857143
+"93"	"Czech Republic"	"USA"	"interest"	0.3
+"94"	"Czech Republic"	"USA"	"partner"	0.568571428571429
+"95"	"Czech Republic"	"USA"	"respect"	0.782857142857143
+"96"	"Czech Republic"	"USA"	"threat"	0.592857142857143
+"97"	"Egypt"	"China"	"best"	0.199
+"98"	"Egypt"	"China"	"favorable"	0.443
+"99"	"Egypt"	"China"	"interest"	0.251
+"100"	"Egypt"	"China"	"partner"	0.285
+"101"	"Egypt"	"China"	"respect"	0.39
+"102"	"Egypt"	"China"	"threat"	0.515
+"103"	"Egypt"	"USA"	"best"	0.476
+"104"	"Egypt"	"USA"	"favorable"	0.16
+"105"	"Egypt"	"USA"	"interest"	0.156
+"106"	"Egypt"	"USA"	"partner"	0.186
+"107"	"Egypt"	"USA"	"respect"	0.452
+"108"	"Egypt"	"USA"	"threat"	0.739
+"109"	"El Salvador"	"China"	"best"	0.119949494949495
+"110"	"El Salvador"	"China"	"favorable"	0.515151515151515
+"111"	"El Salvador"	"China"	"interest"	0.482323232323232
+"112"	"El Salvador"	"China"	"partner"	0.592171717171717
+"113"	"El Salvador"	"China"	"respect"	0.400252525252525
+"114"	"El Salvador"	"China"	"threat"	0.375
+"115"	"El Salvador"	"USA"	"best"	0.777777777777778
+"116"	"El Salvador"	"USA"	"favorable"	0.794191919191919
+"117"	"El Salvador"	"USA"	"interest"	0.698232323232323
+"118"	"El Salvador"	"USA"	"partner"	0.882575757575758
+"119"	"El Salvador"	"USA"	"respect"	0.810606060606061
+"120"	"El Salvador"	"USA"	"threat"	0.301767676767677
+"121"	"France"	"China"	"best"	0
+"122"	"France"	"China"	"favorable"	0.422310756972112
+"123"	"France"	"China"	"interest"	0.136454183266932
+"124"	"France"	"China"	"partner"	0.207171314741036
+"125"	"France"	"China"	"respect"	0.107569721115538
+"126"	"France"	"China"	"threat"	0.794820717131474
+"127"	"France"	"USA"	"best"	0
+"128"	"France"	"USA"	"favorable"	0.644422310756972
+"129"	"France"	"USA"	"interest"	0.299800796812749
+"130"	"France"	"USA"	"partner"	0.698207171314741
+"131"	"France"	"USA"	"respect"	0.814741035856574
+"132"	"France"	"USA"	"threat"	0.559760956175299
+"133"	"Germany"	"China"	"best"	0
+"134"	"Germany"	"China"	"favorable"	0.268292682926829
+"135"	"Germany"	"China"	"interest"	0.202926829268293
+"136"	"Germany"	"China"	"partner"	0.274146341463415
+"137"	"Germany"	"China"	"respect"	0.055609756097561
+"138"	"Germany"	"China"	"threat"	0.846829268292683
+"139"	"Germany"	"USA"	"best"	0
+"140"	"Germany"	"USA"	"favorable"	0.528780487804878
+"141"	"Germany"	"USA"	"interest"	0.444878048780488
+"142"	"Germany"	"USA"	"partner"	0.746341463414634
+"143"	"Germany"	"USA"	"respect"	0.806829268292683
+"144"	"Germany"	"USA"	"threat"	0.67609756097561
+"145"	"Ghana"	"China"	"best"	0.272841051314143
+"146"	"Ghana"	"China"	"favorable"	0.685857321652065
+"147"	"Ghana"	"China"	"interest"	0.578222778473091
+"148"	"Ghana"	"China"	"partner"	0.703379224030037
+"149"	"Ghana"	"China"	"respect"	0.504380475594493
+"150"	"Ghana"	"China"	"threat"	0.591989987484355
+"151"	"Ghana"	"USA"	"best"	0.553191489361702
+"152"	"Ghana"	"USA"	"favorable"	0.846057571964956
+"153"	"Ghana"	"USA"	"interest"	0.607008760951189
+"154"	"Ghana"	"USA"	"partner"	0.757196495619524
+"155"	"Ghana"	"USA"	"respect"	0.712140175219024
+"156"	"Ghana"	"USA"	"threat"	0.311639549436796
+"157"	"Greece"	"China"	"best"	0
+"158"	"Greece"	"China"	"favorable"	0.587
+"159"	"Greece"	"China"	"interest"	0.25
+"160"	"Greece"	"China"	"partner"	0.361
+"161"	"Greece"	"China"	"respect"	0.247
+"162"	"Greece"	"China"	"threat"	0.56
+"163"	"Greece"	"USA"	"best"	0
+"164"	"Greece"	"USA"	"favorable"	0.391
+"165"	"Greece"	"USA"	"interest"	0.195
+"166"	"Greece"	"USA"	"partner"	0.296
+"167"	"Greece"	"USA"	"respect"	0.582
+"168"	"Greece"	"USA"	"threat"	0.65
+"169"	"Indonesia"	"China"	"best"	0.193
+"170"	"Indonesia"	"China"	"favorable"	0.7
+"171"	"Indonesia"	"China"	"interest"	0.534
+"172"	"Indonesia"	"China"	"partner"	0.53
+"173"	"Indonesia"	"China"	"respect"	0.593
+"174"	"Indonesia"	"China"	"threat"	0.645
+"175"	"Indonesia"	"USA"	"best"	0.365
+"176"	"Indonesia"	"USA"	"favorable"	0.613
+"177"	"Indonesia"	"USA"	"interest"	0.512
+"178"	"Indonesia"	"USA"	"partner"	0.462
+"179"	"Indonesia"	"USA"	"respect"	0.682
+"180"	"Indonesia"	"USA"	"threat"	0.725
+"181"	"Israel"	"China"	"best"	0
+"182"	"Israel"	"China"	"favorable"	0.507592190889371
+"183"	"Israel"	"China"	"interest"	0.204989154013015
+"184"	"Israel"	"China"	"partner"	0.162689804772234
+"185"	"Israel"	"China"	"respect"	0.342733188720174
+"186"	"Israel"	"China"	"threat"	0.488069414316703
+"187"	"Israel"	"USA"	"best"	0
+"188"	"Israel"	"USA"	"favorable"	0.683297180043384
+"189"	"Israel"	"USA"	"interest"	0.758134490238612
+"190"	"Israel"	"USA"	"partner"	0.898047722342733
+"191"	"Israel"	"USA"	"respect"	0.797180043383948
+"192"	"Israel"	"USA"	"threat"	0.275488069414317
+"193"	"Italy"	"China"	"best"	0
+"194"	"Italy"	"China"	"favorable"	0.300452488687783
+"195"	"Italy"	"China"	"interest"	0.107692307692308
+"196"	"Italy"	"China"	"partner"	0.123076923076923
+"197"	"Italy"	"China"	"respect"	0.0714932126696833
+"198"	"Italy"	"China"	"threat"	0.810859728506787
+"199"	"Italy"	"USA"	"best"	0
+"200"	"Italy"	"USA"	"favorable"	0.781900452488688
+"201"	"Italy"	"USA"	"interest"	0.418099547511312
+"202"	"Italy"	"USA"	"partner"	0.678733031674208
+"203"	"Italy"	"USA"	"respect"	0.836199095022624
+"204"	"Italy"	"USA"	"threat"	0.379185520361991
+"205"	"Japan"	"China"	"best"	0
+"206"	"Japan"	"China"	"favorable"	0.0571428571428571
+"207"	"Japan"	"China"	"interest"	0.0814285714285714
+"208"	"Japan"	"China"	"partner"	0.114285714285714
+"209"	"Japan"	"China"	"respect"	0.0471428571428571
+"210"	"Japan"	"China"	"threat"	0.921428571428571
+"211"	"Japan"	"USA"	"best"	0
+"212"	"Japan"	"USA"	"favorable"	0.712857142857143
+"213"	"Japan"	"USA"	"interest"	0.382857142857143
+"214"	"Japan"	"USA"	"partner"	0.771428571428571
+"215"	"Japan"	"USA"	"respect"	0.857142857142857
+"216"	"Japan"	"USA"	"threat"	0.832857142857143
+"217"	"Jordan"	"China"	"best"	0.214
+"218"	"Jordan"	"China"	"favorable"	0.397
+"219"	"Jordan"	"China"	"interest"	0.252
+"220"	"Jordan"	"China"	"partner"	0.476
+"221"	"Jordan"	"China"	"respect"	0.482
+"222"	"Jordan"	"China"	"threat"	0.395
+"223"	"Jordan"	"USA"	"best"	0.513
+"224"	"Jordan"	"USA"	"favorable"	0.133
+"225"	"Jordan"	"USA"	"interest"	0.186
+"226"	"Jordan"	"USA"	"partner"	0.151
+"227"	"Jordan"	"USA"	"respect"	0.485
+"228"	"Jordan"	"USA"	"threat"	0.543
+"229"	"Kenya"	"China"	"best"	0.367167919799499
+"230"	"Kenya"	"China"	"favorable"	0.784461152882206
+"231"	"Kenya"	"China"	"interest"	0.771929824561403
+"232"	"Kenya"	"China"	"partner"	0.769423558897243
+"233"	"Kenya"	"China"	"respect"	0.521303258145363
+"234"	"Kenya"	"China"	"threat"	0.703007518796993
+"235"	"Kenya"	"USA"	"best"	0.578947368421053
+"236"	"Kenya"	"USA"	"favorable"	0.805764411027569
+"237"	"Kenya"	"USA"	"interest"	0.791979949874687
+"238"	"Kenya"	"USA"	"partner"	0.789473684210526
+"239"	"Kenya"	"USA"	"respect"	0.734335839598998
+"240"	"Kenya"	"USA"	"threat"	0.62406015037594
+"241"	"Lebanon"	"China"	"best"	0.281
+"242"	"Lebanon"	"China"	"favorable"	0.559
+"243"	"Lebanon"	"China"	"interest"	0.453
+"244"	"Lebanon"	"China"	"partner"	0.362
+"245"	"Lebanon"	"China"	"respect"	0.681
+"246"	"Lebanon"	"China"	"threat"	0.467
+"247"	"Lebanon"	"USA"	"best"	0.393
+"248"	"Lebanon"	"USA"	"favorable"	0.467
+"249"	"Lebanon"	"USA"	"interest"	0.265
+"250"	"Lebanon"	"USA"	"partner"	0.377
+"251"	"Lebanon"	"USA"	"respect"	0.865
+"252"	"Lebanon"	"USA"	"threat"	0.674
+"253"	"Malaysia"	"China"	"best"	0.208029197080292
+"254"	"Malaysia"	"China"	"favorable"	0.81021897810219
+"255"	"Malaysia"	"China"	"interest"	0.509732360097324
+"256"	"Malaysia"	"China"	"partner"	0.761557177615572
+"257"	"Malaysia"	"China"	"respect"	0.568126520681265
+"258"	"Malaysia"	"China"	"threat"	0.615571776155718
+"259"	"Malaysia"	"USA"	"best"	0.319951338199513
+"260"	"Malaysia"	"USA"	"favorable"	0.535279805352798
+"261"	"Malaysia"	"USA"	"interest"	0.355231143552311
+"262"	"Malaysia"	"USA"	"partner"	0.570559610705596
+"263"	"Malaysia"	"USA"	"respect"	0.627737226277372
+"264"	"Malaysia"	"USA"	"threat"	0.706812652068126
+"265"	"Mexico"	"China"	"best"	0.184
+"266"	"Mexico"	"China"	"favorable"	0.447
+"267"	"Mexico"	"China"	"interest"	0.403
+"268"	"Mexico"	"China"	"partner"	0.417
+"269"	"Mexico"	"China"	"respect"	0.338
+"270"	"Mexico"	"China"	"threat"	0.648
+"271"	"Mexico"	"USA"	"best"	0.567
+"272"	"Mexico"	"USA"	"favorable"	0.663
+"273"	"Mexico"	"USA"	"interest"	0.52
+"274"	"Mexico"	"USA"	"partner"	0.597
+"275"	"Mexico"	"USA"	"respect"	0.555
+"276"	"Mexico"	"USA"	"threat"	0.696
+"277"	"Nigeria"	"China"	"best"	0.180407371483996
+"278"	"Nigeria"	"China"	"favorable"	0.772065955383123
+"279"	"Nigeria"	"China"	"interest"	0.684772065955383
+"280"	"Nigeria"	"China"	"partner"	0.718719689621726
+"281"	"Nigeria"	"China"	"respect"	0.618816682832202
+"282"	"Nigeria"	"China"	"threat"	0.297769156159069
+"283"	"Nigeria"	"USA"	"best"	0.542192046556741
+"284"	"Nigeria"	"USA"	"favorable"	0.718719689621726
+"285"	"Nigeria"	"USA"	"interest"	0.618816682832202
+"286"	"Nigeria"	"USA"	"partner"	0.632395732298739
+"287"	"Nigeria"	"USA"	"respect"	0.716779825412221
+"288"	"Nigeria"	"USA"	"threat"	0.377303588748788
+"289"	"Pakistan"	"China"	"best"	0.189009159034138
+"290"	"Pakistan"	"China"	"favorable"	0.806827643630308
+"291"	"Pakistan"	"China"	"interest"	0.488759367194005
+"292"	"Pakistan"	"China"	"partner"	0.800166527893422
+"293"	"Pakistan"	"China"	"respect"	0.598667776852623
+"294"	"Pakistan"	"China"	"threat"	0.124895920066611
+"295"	"Pakistan"	"USA"	"best"	0.282264779350541
+"296"	"Pakistan"	"USA"	"favorable"	0.122398001665279
+"297"	"Pakistan"	"USA"	"interest"	0.144046627810158
+"298"	"Pakistan"	"USA"	"partner"	0.0749375520399667
+"299"	"Pakistan"	"USA"	"respect"	0.478767693588676
+"300"	"Pakistan"	"USA"	"threat"	0.725228975853455
+"301"	"Palestinian territories"	"China"	"best"	0.269135802469136
+"302"	"Palestinian territories"	"China"	"favorable"	0.475308641975309
+"303"	"Palestinian territories"	"China"	"interest"	0.191358024691358
+"304"	"Palestinian territories"	"China"	"partner"	0.258024691358025
+"305"	"Palestinian territories"	"China"	"respect"	0.582716049382716
+"306"	"Palestinian territories"	"China"	"threat"	0.353086419753086
+"307"	"Palestinian territories"	"USA"	"best"	0.275308641975309
+"308"	"Palestinian territories"	"USA"	"favorable"	0.160493827160494
+"309"	"Palestinian territories"	"USA"	"interest"	0.151851851851852
+"310"	"Palestinian territories"	"USA"	"partner"	0.037037037037037
+"311"	"Palestinian territories"	"USA"	"respect"	0.671604938271605
+"312"	"Palestinian territories"	"USA"	"threat"	0.854320987654321
+"313"	"Philippines"	"China"	"best"	0.615671641791045
+"314"	"Philippines"	"China"	"favorable"	0.478855721393035
+"315"	"Philippines"	"China"	"interest"	0.584577114427861
+"316"	"Philippines"	"China"	"partner"	0.222636815920398
+"317"	"Philippines"	"China"	"respect"	0.508706467661692
+"318"	"Philippines"	"China"	"threat"	0.870646766169154
+"319"	"Philippines"	"USA"	"best"	0.369402985074627
+"320"	"Philippines"	"USA"	"favorable"	0.850746268656716
+"321"	"Philippines"	"USA"	"interest"	0.855721393034826
+"322"	"Philippines"	"USA"	"partner"	0.814676616915423
+"323"	"Philippines"	"USA"	"respect"	0.907960199004975
+"324"	"Philippines"	"USA"	"threat"	0.623134328358209
+"325"	"Poland"	"China"	"best"	0.205
+"326"	"Poland"	"China"	"favorable"	0.4225
+"327"	"Poland"	"China"	"interest"	0.26625
+"328"	"Poland"	"China"	"partner"	0.2475
+"329"	"Poland"	"China"	"respect"	0.14
+"330"	"Poland"	"China"	"threat"	0.76125
+"331"	"Poland"	"USA"	"best"	0.5275
+"332"	"Poland"	"USA"	"favorable"	0.67375
+"333"	"Poland"	"USA"	"interest"	0.33
+"334"	"Poland"	"USA"	"partner"	0.40125
+"335"	"Poland"	"USA"	"respect"	0.75625
+"336"	"Poland"	"USA"	"threat"	0.58625
+"337"	"Russia"	"China"	"best"	0.315261044176707
+"338"	"Russia"	"China"	"favorable"	0.635542168674699
+"339"	"Russia"	"China"	"interest"	0.394578313253012
+"340"	"Russia"	"China"	"partner"	0.525100401606426
+"341"	"Russia"	"China"	"respect"	0.468875502008032
+"342"	"Russia"	"China"	"threat"	0.672690763052209
+"343"	"Russia"	"USA"	"best"	0.231927710843373
+"344"	"Russia"	"USA"	"favorable"	0.521084337349398
+"345"	"Russia"	"USA"	"interest"	0.264056224899598
+"346"	"Russia"	"USA"	"partner"	0.31425702811245
+"347"	"Russia"	"USA"	"respect"	0.677710843373494
+"348"	"Russia"	"USA"	"threat"	0.759036144578313
+"349"	"Senegal"	"China"	"best"	0.3175
+"350"	"Senegal"	"China"	"favorable"	0.76875
+"351"	"Senegal"	"China"	"interest"	0.61625
+"352"	"Senegal"	"China"	"partner"	0.7775
+"353"	"Senegal"	"China"	"respect"	0.585
+"354"	"Senegal"	"China"	"threat"	0.36625
+"355"	"Senegal"	"USA"	"best"	0.505
+"356"	"Senegal"	"USA"	"favorable"	0.81
+"357"	"Senegal"	"USA"	"interest"	0.67375
+"358"	"Senegal"	"USA"	"partner"	0.83875
+"359"	"Senegal"	"USA"	"respect"	0.71625
+"360"	"Senegal"	"USA"	"threat"	0.3325
+"361"	"South Africa"	"China"	"best"	0.25398773006135
+"362"	"South Africa"	"China"	"favorable"	0.478527607361963
+"363"	"South Africa"	"China"	"interest"	0.663803680981595
+"364"	"South Africa"	"China"	"partner"	0.507975460122699
+"365"	"South Africa"	"China"	"respect"	0.442944785276074
+"366"	"South Africa"	"China"	"threat"	0.626993865030675
+"367"	"South Africa"	"USA"	"best"	0.452760736196319
+"368"	"South Africa"	"USA"	"favorable"	0.725153374233129
+"369"	"South Africa"	"USA"	"interest"	0.72760736196319
+"370"	"South Africa"	"USA"	"partner"	0.587730061349693
+"371"	"South Africa"	"USA"	"respect"	0.696932515337423
+"372"	"South Africa"	"USA"	"threat"	0.525153374233129
+"373"	"South Korea"	"China"	"best"	0
+"374"	"South Korea"	"China"	"favorable"	0.488257107540173
+"375"	"South Korea"	"China"	"interest"	0.173053152039555
+"376"	"South Korea"	"China"	"partner"	0.281829419035847
+"377"	"South Korea"	"China"	"respect"	0.245982694684796
+"378"	"South Korea"	"China"	"threat"	0.925834363411619
+"379"	"South Korea"	"USA"	"best"	0
+"380"	"South Korea"	"USA"	"favorable"	0.792336217552534
+"381"	"South Korea"	"USA"	"interest"	0.351050679851669
+"382"	"South Korea"	"USA"	"partner"	0.703337453646477
+"383"	"South Korea"	"USA"	"respect"	0.904820766378245
+"384"	"South Korea"	"USA"	"threat"	0.838071693448702
+"385"	"Spain"	"China"	"best"	0
+"386"	"Spain"	"China"	"favorable"	0.473
+"387"	"Spain"	"China"	"interest"	0.116
+"388"	"Spain"	"China"	"partner"	0.247
+"389"	"Spain"	"China"	"respect"	0.107
+"390"	"Spain"	"China"	"threat"	0.788
+"391"	"Spain"	"USA"	"best"	0
+"392"	"Spain"	"USA"	"favorable"	0.62
+"393"	"Spain"	"USA"	"interest"	0.19
+"394"	"Spain"	"USA"	"partner"	0.542
+"395"	"Spain"	"USA"	"respect"	0.694
+"396"	"Spain"	"USA"	"threat"	0.583
+"397"	"Tunisia"	"China"	"best"	0.442
+"398"	"Tunisia"	"China"	"favorable"	0.616
+"399"	"Tunisia"	"China"	"interest"	0.271
+"400"	"Tunisia"	"China"	"partner"	0.52
+"401"	"Tunisia"	"China"	"respect"	0.515
+"402"	"Tunisia"	"China"	"threat"	0.339
+"403"	"Tunisia"	"USA"	"best"	0.302
+"404"	"Tunisia"	"USA"	"favorable"	0.414
+"405"	"Tunisia"	"USA"	"interest"	0.234
+"406"	"Tunisia"	"USA"	"partner"	0.356
+"407"	"Tunisia"	"USA"	"respect"	0.627
+"408"	"Tunisia"	"USA"	"threat"	0.547
+"409"	"Turkey"	"China"	"best"	0.238
+"410"	"Turkey"	"China"	"favorable"	0.249
+"411"	"Turkey"	"China"	"interest"	0.19
+"412"	"Turkey"	"China"	"partner"	0.157
+"413"	"Turkey"	"China"	"respect"	0.235
+"414"	"Turkey"	"China"	"threat"	0.501
+"415"	"Turkey"	"USA"	"best"	0.401
+"416"	"Turkey"	"USA"	"favorable"	0.202
+"417"	"Turkey"	"USA"	"interest"	0.213
+"418"	"Turkey"	"USA"	"partner"	0.147
+"419"	"Turkey"	"USA"	"respect"	0.497
+"420"	"Turkey"	"USA"	"threat"	0.77
+"421"	"Uganda"	"China"	"best"	0.3275
+"422"	"Uganda"	"China"	"favorable"	0.58625
+"423"	"Uganda"	"China"	"interest"	0.4975
+"424"	"Uganda"	"China"	"partner"	0.57875
+"425"	"Uganda"	"China"	"respect"	0.47125
+"426"	"Uganda"	"China"	"threat"	0.48375
+"427"	"Uganda"	"USA"	"best"	0.4925
+"428"	"Uganda"	"USA"	"favorable"	0.7275
+"429"	"Uganda"	"USA"	"interest"	0.62125
+"430"	"Uganda"	"USA"	"partner"	0.70375
+"431"	"Uganda"	"USA"	"respect"	0.7025
+"432"	"Uganda"	"USA"	"threat"	0.51125
+"433"	"Venezuela"	"China"	"best"	0.238
+"434"	"Venezuela"	"China"	"favorable"	0.708
+"435"	"Venezuela"	"China"	"interest"	0.666
+"436"	"Venezuela"	"China"	"partner"	0.736
+"437"	"Venezuela"	"China"	"respect"	0.519
+"438"	"Venezuela"	"China"	"threat"	0.32
+"439"	"Venezuela"	"USA"	"best"	0.517
+"440"	"Venezuela"	"USA"	"favorable"	0.528
+"441"	"Venezuela"	"USA"	"interest"	0.503
+"442"	"Venezuela"	"USA"	"partner"	0.364
+"443"	"Venezuela"	"USA"	"respect"	0.526
+"444"	"Venezuela"	"USA"	"threat"	0.551

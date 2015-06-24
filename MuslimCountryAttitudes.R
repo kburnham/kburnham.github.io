@@ -9,7 +9,7 @@ library(dplyr)
 library(tidyr)
 
 
-setwd("/Users/kb/Documents/MOOCs/datascience/DataVis/DataVis_Final_Project")
+setwd("/Users/kb/Documents/MOOCs/datascience/DataVis/FinalProject_DV/kburnham.github.io")
 #data <- read.spss("Pew Research Global Attitudes Project Spring 2013 Dataset for web.sav", to.data.frame = True)
 
 
@@ -225,7 +225,9 @@ ggplot(aes(x = country, y = Score, fill = USA.or.China), data = long.data) +
 
 ##now export long.data to a tsv file so that I can import it with dimple.js
 
+#remove China and United States from the data
 
+subset(final.data, country != c("China", "United States")
 
 
 write.table(final.data, "muslim.attitudes.to.USA.China.tsv", sep = "\t", col.names = NA)
