@@ -1,7 +1,7 @@
 $('form').submit(function () {
 
 var mainWidth = 1400
-var mainHeight = 1000
+var mainHeight = 300 + (150 * countriesToInclude.length)
 
 var svg = dimple.newSvg("#chartContainer", mainWidth, mainHeight);
 d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
@@ -17,7 +17,7 @@ d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
     left = 80,
     inMarg = 70,
     width =400,
-    height = 250,
+    height = 50 * countriesToInclude.length,
     totalWidth = parseFloat(svg.attr("width"));
 
     //draw a chart for each of the 6 questions
