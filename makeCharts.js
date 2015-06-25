@@ -1,3 +1,5 @@
+$('form').submit(function () {
+
 var mainWidth = 1400
 var mainHeight = 1000
 
@@ -25,9 +27,7 @@ d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
       row += 1;
       col = 0;
     }
-    var countriesToInclude = ["Egypt", "Indonesia", "Turkey", "Pakistan", 
-                 "Tunisia", "Bolivia", "Russia"];
-    //set list of countries to include, the chart is  noisy, so we remove Jordan, a very small country
+    
     data = dimple.filterData(data, "country", countriesToInclude);
 
 
@@ -83,7 +83,7 @@ d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
     x.tickFormat = "%";
 
     var y = myChart.addCategoryAxis("y", ["country", "USA.or.China"]);
-    y.addOrderRule(['Latin America', 'Europe', 'Tunisia', 'Indonesia', 'Pakistan', 'Turkey', 'Egypt']);
+    y.addOrderRule("country");
     y.addGroupOrderRule(["China", "USA"]);
 
     var s = myChart.addSeries(["avg.Score", "country", "USA.or.China"], dimple.plot.bar);
@@ -119,13 +119,13 @@ d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
 
     // Once drawn we can access the shapes
     // If this is not in the first column remove the y text
-    if (col > 0) {
-      y.shapes.selectAll("text").remove();
-    }
-    // If this is not in the last row remove the x text
-    if (row == 1) {
-       x.shapes.selectAll("text").remove();
-    }
+    // if (col > 0) {
+    //   y.shapes.selectAll("text").remove();
+    // }
+    // // If this is not in the last row remove the x text
+    // if (row == 1) {
+    //    x.shapes.selectAll("text").remove();
+    //}
 
     y.titleShape.remove();
     x.titleShape.remove();
@@ -135,3 +135,5 @@ d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
     col += 1;
     } , this)
 });
+return false
+})
