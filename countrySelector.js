@@ -7,36 +7,38 @@ $(document).ready(function() {
 		
 		for (i = 0; i < allCountries.length; i++) {
 			$('form').append('<input class="box" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
-
 		}
-		//$('form').append('<input type="submit" value="Make charts">');
 		
-		$(":checkbox").click(function () {
-			var index = jQuery.inArray(this.name, countriesToInclude);
-			if (index == -1) {
-				countriesToInclude.push(this.name);
-			} else {
-				countriesToInclude.splice(index, 1);
-			}
-			
-			console.log(countriesToInclude);
-
-		
-		})
-
+		//when a box in checked, make a new chart
 		d3.selectAll('input').on('change', function () {
+			
 
+			d3.selectAll("svg").remove();
+			
+			//get list of countriresToInclude
+			if (this.checked) {
+				countriesToInclude.push(this.name);
+				//return
+
+			} else {
+				var index = jQuery.inArray(this.name, countriesToInclude);
+				countriesToInclude.splice(index, 1);
+
+			}
+
+			//alert(countriesToInclude);
+			//make the chart
 			var mainWidth = 1400
 			var mainHeight = 300 + (150 * countriesToInclude.length)
 
 			var svg = dimple.newSvg("#chartContainer", mainWidth, mainHeight);
 
-			d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
+			
 
 
 	    //get a unique list of questions
 	    		var questions = dimple.getUniqueValues(data, "Question");
-
+	    		
 	    //set the bounds for the charts
 			    var row = 0,
 			    col = 0,
@@ -45,20 +47,20 @@ $(document).ready(function() {
 			    inMarg = 70,
 			    width =400,
 			    height = 50 * countriesToInclude.length,
-			    totalWidth = parseFloat(svg.attr("width"));
+			    totalWidth = mainWidth
 
 			    //draw a chart for each of the 6 questions
 			    questions.forEach(function (question) {
+			    	
 			    // if the next sunchart would go off the edge, move up a row
 			    if (left + ((col + 1) * (width + inMarg)) > totalWidth) {
 			      row += 1;
 			      col = 0;
 			    }
 			    
-			    data = dimple.filterData(data, "country", countriesToInclude);
+			    countryData = dimple.filterData(data, "country", countriesToInclude);
 
-
-			    //set question text
+		    	//assign question text
 
 			    switch (question) {
 			      case "favorable":
@@ -83,7 +85,7 @@ $(document).ready(function() {
 			    }
 
 			    //extract the data corresponding to the current question
-			    var chartData = dimple.filterData(data, "Question", question);
+			    var chartData = dimple.filterData(countryData, "Question", question);
 
 			    svg
 			        .append("text")
@@ -96,6 +98,7 @@ $(document).ready(function() {
 			            .text(questionText);
 
 			    var myChart = new dimple.chart(svg, chartData);
+			    
 			    myChart.setBounds(
 			        left + (col * (width + inMarg)),
 			        top + (row * (height + inMarg)),
@@ -138,32 +141,14 @@ $(document).ready(function() {
 			        };
 
 			    myChart.draw();
-			    // Once drawn we can access the shapes
-			    // If this is not in the first column remove the y text
-			    // if (col > 0) {
-			    //   y.shapes.selectAll("text").remove();
-			    // }
-			    // // If this is not in the last row remove the x text
-			    // if (row == 1) {
-			    //    x.shapes.selectAll("text").remove();
-			    //}
+			    
 
 			    y.titleShape.remove();
 			    x.titleShape.remove();
 
-
-
 			    col += 1;
 			    } , this)
-			})
-
 		})
 		})
-
-
-		
-
 	
-	
-
 })
