@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	countriesToInclude = [];
+	countriesToInclude = ["Pakistan", "Egypt", "Indonesia", "Tunisia", "Turkey"];
 	
 	
 	d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
@@ -7,7 +7,21 @@ $(document).ready(function() {
 		
 		for (i = 0; i < allCountries.length; i++) {
 			$('form').append('<input class="box" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
+
 		}
+
+		//precheck some boxes
+
+		$('input[type=checkbox]').each(function () {
+			console.log(this.name);
+			if (jQuery.inArray(this.name, countriesToInclude) != -1) {
+				$(this).attr("checked", true);
+			}
+		})
+
+		
+		//make the first set of charts based on countriesToInclude
+		loadData(data)
 		
 		//when a box in checked, make a new chart
 		d3.selectAll('input').on('change', function () {
@@ -28,6 +42,14 @@ $(document).ready(function() {
 
 			//alert(countriesToInclude);
 			//make the chart
+
+			loadData(data)
+			
+		})
+
+		
+		})
+	var loadData = function (data) {
 			var mainWidth = 1400
 			var mainHeight = 300 + (150 * countriesToInclude.length)
 
@@ -35,9 +57,9 @@ $(document).ready(function() {
 
 			
 
-
 	    //get a unique list of questions
 	    		var questions = dimple.getUniqueValues(data, "Question");
+
 	    		
 	    //set the bounds for the charts
 			    var row = 0,
@@ -148,7 +170,6 @@ $(document).ready(function() {
 
 			    col += 1;
 			    } , this)
-		})
-		})
+		}
 	
 })
