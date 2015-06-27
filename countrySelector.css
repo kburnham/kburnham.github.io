@@ -1,6 +1,6 @@
 #countries {
-    -webkit-column-count: 6; /* Chrome, Safari, Opera */
-    -moz-column-count: 6; /* Firefox */
-    column-count: 6;
+    -webkit-column-count: 5; /* Chrome, Safari, Opera */
+    -moz-column-count: 5; /* Firefox */
+    column-count: 5;
     
 }
