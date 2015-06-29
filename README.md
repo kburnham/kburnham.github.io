@@ -17,7 +17,6 @@ Other changes include:
 - include the legend on all the left side charts so that it is always in view.
 - choose slightly less aggresive colors for the bars
 - removing the regional averages since they seemed to be confusing. They were intended originally for comparison to the Muslim countries, but since the charts have expanded since they, they made less sense.
-- 
 
 
 <h3>Feedback</h3>
