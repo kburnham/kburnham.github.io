@@ -1,30 +1,117 @@
 $(document).ready(function() {
-	countriesToInclude = ["Pakistan", "Egypt", "Indonesia", "Tunisia", "Turkey"];
+	//hard code countries to include in starter charts
+	var countriesToInclude = ["Pakistan", "Egypt", "Indonesia", "Tunisia", "Turkey"];
+
+	//define regional groups
+	//I want to make a dictionary 
+
+
+	var euroCountries = ["Germany", "France", "Spain", "Britain", "Italy", "Poland", "Russia", "Greece", "Czech Republic"];
+	var asiaCountries = ["Australia", "Indonesia", "Japan", "Malaysia", "Pakistan", "Philippines", "South Korea"];
+	var muslimCountries = ["Pakistan", "Egypt", "Indonesia", "Tunisia", "Turkey", "Jordan", "Palestinian territories"];
+	var latinamericanCountries = ["Agentina", "Bolivia", "Brazil", "Chile", "El Salvador", "Mexico", "Venezuela"];
+	var africanCountries = ["Ghana", "Kenya", "Nigeria", "Senegal", "South Africa", "Tunisia", "Egypt", "Uganda"];
+
+	var regions = {"euroCountries" : euroCountries, "asiaCountries" : asiaCountries, "muslimCountries" : muslimCountries,
+					"latinamericanCountries" : latinamericanCountries, "africanCountries" : africanCountries};
+	var names = {"euroCountries" : "European Countries", "asiaCountries" : "Asian Countries", "muslimCountries" : "Muslim Countries",
+					"latinamericanCountries" : "Latin American Countries", "africanCountries" : "African Countries"};
+
 	
 	
 	d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
 		var allCountries = dimple.getUniqueValues(data, "country");
-		
 		for (i = 0; i < allCountries.length; i++) {
-			$('form').append('<input class="box" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
-
+			$('form[id="countryChooser"]').append('<input class="country" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
 		}
 
-		//precheck some boxes
 
+		//add buttons for select all and deselect all
+		$('form[id="multiSelectors"]').append('<button class="selectAllCountries" type="button" name = "Select All">Select All</button>');
+		$('form[id="multiSelectors"]').append('<button class="selectNoCountries" type="button" name = "Select None">Clear All</button><br>	');
+		$('form[id="multiSelectors"]').append('<p>Add all . . .</p>');
+
+		//add buttons to select all members of regional groups
+		for (var key in regions) {
+			$('form[id="multiSelectors"]').append('<button class="multiSelector" type="button" id = ' + key + '>' + names[key] + '</button>');
+
+			
+		}
+		
+
+
+		
+
+		
+
+
+		//precheck some boxes
 		$('input[type=checkbox]').each(function () {
-			console.log(this.name);
+			//console.log(this.name);
 			if (jQuery.inArray(this.name, countriesToInclude) != -1) {
-				$(this).attr("checked", true);
+				$(this).prop("checked", true);
 			}
 		})
-
 		
 		//make the first set of charts based on countriesToInclude
 		loadData(data)
+
+
+		//function to handle "select all"
+		d3.select('.selectAllCountries').on('click', function () {
+			
+			$('input[type=checkbox]').each(function () {
+				$(this).prop("checked", true);
+
+			})
+			countriesToInclude = allCountries;
+			loadData(data)
+
+		})
+
+		//function to handle "select none"
+
+		d3.select('.selectNoCountries').on('click', function () {
+			$('input[type=checkbox]').each(function () {
+				$(this).prop("checked", false);
+		})
+		countriesToInclude = []
+		loadData(data)
+	})
+
+		//function to handle "Select European Countries"
+		//I want to generalize this to handle all the regional buttons
+
+		d3.select('.selectEuroCountries').on('click', function () {
+
+			$('input[type=checkbox]').each(function () {
+				if (jQuery.inArray(this.name, euroCountries) != -1) {
+					$(this).prop("checked", true);
+					} 
+			})
+			countriesToInclude = countriesToInclude.concat(euroCountries);
+			loadData(data);
+		})
+
+		//function for selecting groups of countries
+
+		d3.selectAll('.multiSelector').on('click', function () {
+			currentArray = regions[this.id];
+			
+			$('input[type=checkbox]').each(function () {
+				if (jQuery.inArray(this.name, currentArray) != -1) {
+					$(this).prop("checked", true);
+					} 
+			})
+			countriesToInclude = countriesToInclude.concat(currentArray);
+			loadData(data);
+		})
+
+		
+
 		
 		//when a box in checked, make a new chart
-		d3.selectAll('input').on('change', function () {
+		d3.selectAll('input[class="country"').on('click', function () {
 			
 
 			d3.selectAll("svg").remove();
@@ -32,24 +119,25 @@ $(document).ready(function() {
 			//get list of countriresToInclude
 			if (this.checked) {
 				countriesToInclude.push(this.name);
-				//return
+				
 
 			} else {
 				var index = jQuery.inArray(this.name, countriesToInclude);
 				countriesToInclude.splice(index, 1);
-
 			}
 
-			//alert(countriesToInclude);
-			//make the chart
-
+			//make charts again based on most recent click
 			loadData(data)
 			
 		})
 
 		
 		})
+
+	//this function is called every time the charts are made
 	var loadData = function (data) {
+			d3.selectAll("svg").remove();
+			console.log(countriesToInclude)
 			var mainWidth = 1400
 			var mainHeight = 300 + (150 * countriesToInclude.length)
 
@@ -157,8 +245,8 @@ $(document).ready(function() {
 			                "Country: " + e.aggField[1],
 			                
 			                "Regarding: " + e.aggField[2],
-			                Math.round(e.aggField[0] * 100) + "%" //display % in 2 digits (e.g. 53%)
-
+			                Math.round(e.aggField[0] * 100) + "%", //display % in 2 digits (e.g. 53%)
+		                	questionText
 			            ];
 			        };
 
