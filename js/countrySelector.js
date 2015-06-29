@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 	
 	//generate a checkbox for each of the countries in the data file
-	d3.tsv("data/muslim.attitudes.to.USA.China.tsv", function (data) {
+	d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
 		var allCountries = dimple.getUniqueValues(data, "country");
 		for (i = 0; i < allCountries.length; i++) {
 			$('form[id="countryChooser"]').append('<input class="country" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
