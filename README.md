@@ -1,18 +1,18 @@
 # kburnham.github.io
 
-Summary
+<h3>Summary</h3>
 
 This vizualization displays the results of a recent Pew Research survey that asked people around the world for their opinions about both the United States and China. It allows the user to compare the answers given by people in different countries to questions about how they view the two largets economies in the world. Large discrepancies between the red and blue bars in the charts indicate countries that have very different views about the United States and China (see Japan and Pakistan). Buttons below the check boxes allow users to see all countries in a given region at once.
 
-Design
+<h3>Design</h3>
 
 The primary change after the halfway point of the design was to make the charts interactive by allowing the user to choose which countries appear in them. Originally the charts showed only the results of Muslim majority countries. Now users can add and subtract countries to the charts as they wish and can even add groups of countries from a given region at the click of the button.
 
 Other changes include:
- - adding the '%' symbol to the x-axis so that it was clear what is being measured
- - including the y-axis labels on all charts, not just the left side ones. This makes it easier to see which countries are being looked at.
- - changed the tooltips so that they are more informative in that they provide more, less cryptic information
- - added a link to a description of methodolgy so that users can get more information about how the data were generated.
+- adding the '%' symbol to the x-axis so that it was clear what is being measured
+- including the y-axis labels on all charts, not just the left side ones. This makes it easier to see which countries are being looked at.
+- changed the tooltips so that they are more informative in that they provide more, less cryptic information
+- added a link to a description of methodolgy so that users can get more information about how the data were generated.
 - increased the spacing between bar groups for a neater look.
 - include the legend on all the left side charts so that it is always in view.
 - choose slightly less aggresive colors for the bars
@@ -20,7 +20,7 @@ Other changes include:
 - 
 
 
-Feedback
+<h3>Feedback</h3>
 
 From my dad:
 
@@ -54,7 +54,7 @@ It is a bit confusing given the title of the visualization. You may consider vis
 
 Also, how do you compute average ratings from these regions?
 
-Resources
+<h3>Resources</h3>
 
 - http://www.codecademy.com/en/tracks/jquery
 - http://bl.ocks.org/mbostock/3885705
