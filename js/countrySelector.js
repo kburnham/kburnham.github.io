@@ -49,14 +49,14 @@ $(document).ready(function() {
 
 
 		
-		//detach the form - we will add it later
+		
 
 		
 		
 		//make charts for the first time. countriesToInclude is hard coded above
 		loadData(data)
 
-		var selector = $('#countryChooser').detach();
+		//var selector = $('#countryChooser').detach();
 		
 		$('#next1').on('click', function() {
 
@@ -70,6 +70,7 @@ $(document).ready(function() {
 		$('#continue').on('click', function() {
 			
 			$('#africanIntro').remove();
+			selector.appendTo('#countries');
 		})
 		//function to handle "select all"
 		d3.select('.selectAllCountries').on('click', function () {
