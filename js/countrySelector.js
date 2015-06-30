@@ -112,6 +112,10 @@ $(document).ready(function() {
 
 		
 	})
+	
+	$('#next1').on('click', function() {
+		$('#muslimIntro').remove();
+	})
 
 	//chart making function
 	var loadData = function (data) {
