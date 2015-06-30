@@ -56,7 +56,7 @@ $(document).ready(function() {
 		//make charts for the first time. countriesToInclude is hard coded above
 		loadData(data)
 
-		//var selector = $('#countryChooser').detach();
+		var selector = $('#countryChooser').detach();
 		
 		$('#next1').on('click', function() {
 
