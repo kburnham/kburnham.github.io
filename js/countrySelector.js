@@ -146,7 +146,7 @@ $(document).ready(function() {
 
 			//create svg to contain the charts
 			var mainWidth = 1400
-			var mainHeight = 300 + (200 * countriesToInclude.length)
+			var mainHeight = 350 + (210 * countriesToInclude.length)
 			var svg = dimple.newSvg("#chartContainer", mainWidth, mainHeight);
 
 			
@@ -208,9 +208,9 @@ $(document).ready(function() {
 		        .append("text")
 		            .attr("x", left + (col * (width + inMarg)) + (width / 2))
 		            .attr("y", top + (row * (height + inMarg)) - 10)
-		            .style("font-family", "helvetica")
+		            //.style("font-family", "Arial")
 		            .style("text-anchor", "middle")
-		            .style("font-size", "14px")
+		            .style("font-size", "15px")
 		            .text(questionText);
 
 	    	//create the subchart
@@ -238,8 +238,8 @@ $(document).ready(function() {
 		    s.barGap = .3;
 
 		    myChart.defaultColors = [
-		    new dimple.color("#FF6961", "#FF6961", 1), // red
-		    new dimple.color("#779ECB", "#779ECB", 1), // blue
+		    new dimple.color("#FF6961", "#FF6961", 1), // China
+		    new dimple.color("#779ECB", "#779ECB", 1), // USA
 		      
 		      
 		    ];
