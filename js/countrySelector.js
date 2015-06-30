@@ -17,9 +17,11 @@ $(document).ready(function() {
 	var names = {"euroCountries" : "European Countries", "asiaCountries" : "Asian Countries", "muslimCountries" : "Muslim Countries",
 					"latinamericanCountries" : "Latin American Countries", "africanCountries" : "African Countries"};
 
+
 	
 	//generate a checkbox for each of the countries in the data file
 	d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
+
 		var allCountries = dimple.getUniqueValues(data, "country");
 		for (i = 0; i < allCountries.length; i++) {
 			$('div[id="countryCheckBoxes"]').append('<input class="country" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
@@ -44,11 +46,31 @@ $(document).ready(function() {
 				$(this).prop("checked", true);
 			}
 		})
+
+
+		
+		//detach the form - we will add it later
+
+		
 		
 		//make charts for the first time. countriesToInclude is hard coded above
 		loadData(data)
 
+		var selector = $('#countryChooser').detach();
+		
+		$('#next1').on('click', function() {
 
+			
+			$('#muslimIntro').remove();
+			countriesToInclude = africanCountries.slice();
+
+			loadData(data);
+			$('#intros').append('<p id="africanIntro">In the African countries we find more goodwill in general, especially towards the United States. The American economic model continues to be preferred, but strong support exists only in a few countries like Kenya and Senegal.Click continue to explore the data on your own<br><button id="continue">Continue</button></p>');
+
+		$('#continue').on('click', function() {
+			
+			$('#africanIntro').remove();
+		})
 		//function to handle "select all"
 		d3.select('.selectAllCountries').on('click', function () {
 			
@@ -110,11 +132,11 @@ $(document).ready(function() {
 			
 		})
 
+
 		
 	})
 	
-	$('#next1').on('click', function() {
-		$('#muslimIntro').remove();
+
 	})
 
 	//chart making function
