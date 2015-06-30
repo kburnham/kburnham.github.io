@@ -22,19 +22,19 @@ $(document).ready(function() {
 	d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
 		var allCountries = dimple.getUniqueValues(data, "country");
 		for (i = 0; i < allCountries.length; i++) {
-			$('form[id="countryChooser"]').append('<input class="country" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
+			$('div[id="countryCheckBoxes"]').append('<input class="country" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
 		}
 
 
 	//add buttons for select all and deselect all
-		$('form[id="multiSelectors"]').append('<button class="selectAllCountries" type="button" name = "Select All">Select All</button>');
-		$('form[id="multiSelectors"]').append('<button class="selectNoCountries" type="button" name = "Select None">Clear All</button><br>	');
+		$('div[id="multiSelectors"]').append('<button class="selectAllCountries" type="button" name = "Select All">Select All</button>');
+		$('div[id="multiSelectors"]').append('<button class="selectNoCountries" type="button" name = "Select None">Clear All</button><br>	');
 
 		//add buttons to select all members of regional groups
-		$('form[id="multiSelectors"]').append('<p>Add all . . .</p>');
+		$('div[id="multiSelectors"]').append('<p>Add all . . .</p>');
 		for (var key in regions) {
-			$('form[id="multiSelectors"]').append('<button class="multiSelector" type="button" id = ' + key + '>' + names[key] + '</button>');
-			$('form[id="multiSelectors"]').append('<div class="divider"/>');
+			$('div[id="multiSelectors"]').append('<button class="multiSelector" type="button" id = ' + key + '>' + names[key] + '</button>');
+			$('div[id="multiSelectors"]').append('<div class="divider"/>');
 		}
 			
 		//precheck some boxes
