@@ -22,6 +22,8 @@ Other changes include:
 - choose slightly less aggresive colors for the bars
 - removing the regional averages since they seemed to be confusing. They were intended originally for comparison to the Muslim countries, but since the charts have expanded since they, they made less sense.
 
+The halfway point for the project is at commit 3728d912196c6db7f77aa30bfddf691dd6a5db6d 'halfway point'.
+
 
 <h3>Feedback</h3>
 
