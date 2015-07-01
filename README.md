@@ -6,6 +6,10 @@ This vizualization displays the results of a recent Pew Research survey that ask
 
 <h3>Design</h3>
 
+My initial plan was to use the Pew data to see how different countries in the Muslim world view both the United States and China. From my own experiences I know that views of the United States in at least some Muslim countries tend to be negative, I knew less about Muslim countries outside the Middle East, and I know little about how they view China. So I filtered the Pew data to find questions that allowed direct comparisons between the US and China. I simplified the data by collapsing the answers to some questions. I did this hoping to create simple small multiples based on the different comparisons that could be made. 
+
+I felt that a bar chart would be appropriate for these comparisons since they compared measures between two categories and they would be well known to most users and because length is a prominent visual encoding. 
+
 The primary change after the halfway point of the design was to make the charts interactive by allowing the user to choose which countries appear in them. Originally the charts showed only the results of Muslim majority countries. Now users can add and subtract countries to the charts as they wish and can even add groups of countries from a given region at the click of the button.
 
 Other changes include:
