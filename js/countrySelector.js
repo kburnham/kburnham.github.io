@@ -1,10 +1,10 @@
 $(document).ready(function() {
 	//hard code countries to include in starter charts
-	var countriesToInclude = ["Pakistan", "Egypt", "Indonesia", "Tunisia", "Turkey"];
+	var muslimCountries = ["Pakistan", "Egypt", "Indonesia", "Tunisia", "Turkey"];
 
 	//define regional groups for "Add all . . . "
 	var euroCountries = ["Germany", "France", "Spain", "Britain", "Italy", "Poland", "Russia", "Greece", "Czech Republic"];
-	var asiaCountries = ["Australia", "Indonesia", "Japan", "Malaysia", "Pakistan", "Philippines", "South Korea"];
+	var asiaCountries = ["Australia", "Indonesia", "Japan", "Malaysia", "Pakistan", "Philippines", "South Korea", "Turkey"];
 	//var muslimCountries = ["Pakistan", "Egypt", "Indonesia", "Tunisia", "Turkey", "Jordan", "Palestinian territories"];
 	var latinamericanCountries = ["Agentina", "Bolivia", "Brazil", "Chile", "El Salvador", "Mexico", "Venezuela"];
 	var africanCountries = ["Ghana", "Kenya", "Nigeria", "Senegal", "South Africa", "Tunisia", "Egypt", "Uganda"];
@@ -21,6 +21,85 @@ $(document).ready(function() {
 	
 	//generate a checkbox for each of the countries in the data file
 	d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
+
+		makeSelector(data);
+
+		//d3.select("#countryChooser").remove()
+		
+		//make charts for the first time. countriesToInclude is hard coded above
+		makeCharts(data, muslimCountries);
+
+
+		//function to handle "select all"
+		d3.select('#selectAll').on('click', function () {
+			d3.selectAll(".country")
+				.property('checked', true);
+		})
+
+		//function to handle "select none"
+
+		d3.select('#selectNone').on('click', function () {
+			d3.selectAll(".country")
+				.property('checked', false);
+		})
+
+	
+		
+
+		
+
+		//function for selecting groups of countries
+		d3.selectAll('.multiSelector').on('click', function () {
+			
+			currentArray = regions[this.id];
+
+			d3.selectAll('.country')
+				.property("checked", function () {
+					
+					if (currentArray.indexOf(this.name) != -1) {
+						return true
+					} 
+				})
+		})
+					
+		
+		//submit and make charts
+		d3.select('#submit').on('click', function () {
+			makeCharts(data)
+		})
+
+			
+
+			
+		//every time a box is checked, make the new chart
+		// d3.selectAll('input[class="country"').on('click', function () {
+			
+
+		// 	d3.selectAll("svg").remove();
+			
+		// 	//get list of countriresToInclude
+		// 	if (this.checked) {
+		// 		countriesToInclude.push(this.name);
+				
+
+		// 	} else {
+		// 		var index = jQuery.inArray(this.name, countriesToInclude);
+		// 		countriesToInclude.splice(index, 1);
+		// 	}
+
+		// 	//make charts again based on most recent click
+			
+			
+		// })
+
+
+		
+	})
+	
+
+	
+
+	var makeSelector = function (data) {
 		var allCountries = dimple.getUniqueValues(data, "country");
 		for (i = 0; i < allCountries.length; i++) {
 			//$('div[id="countryCheckBoxes"]').append('<input class="country" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
@@ -39,6 +118,7 @@ $(document).ready(function() {
 
 		d3.select('#submitButton')
 				.append('button')
+					.attr("type", "button")
 					.attr("id", "submit")
 					.text("Submit")
 				;
@@ -57,7 +137,7 @@ $(document).ready(function() {
 		d3.select("#multiSelectors")
 			.append('button')
 				.attr("id", "selectNone")
-				//.attr("type", "button")
+				.attr("type", "button")
 				.text("Clear All")
 				;
 		
@@ -75,6 +155,7 @@ $(document).ready(function() {
 				.append('button')
 					.attr("class", "multiSelector")
 					.attr("id", region)
+					.attr("type", "button")
 					.text(names[region])
 					;
 		}
@@ -83,111 +164,32 @@ $(document).ready(function() {
 
 		
 			
-		//precheck some boxes
-		$('input[type=checkbox]').each(function () {
-			//console.log(this.name);
-			if (jQuery.inArray(this.name, countriesToInclude) != -1) {
-				$(this).prop("checked", true);
-			}
-		})
-
-
-		
-		
-
-		
-		
-		//make charts for the first time. countriesToInclude is hard coded above
-		loadData(data)
-
-		//var selector = $('#countryChooser').detach();
-		
-		$('#next1').on('click', function() {
-
-			
-			$('#muslimIntro').remove();
-			countriesToInclude = africanCountries.slice();
-
-			loadData(data);
-			$('#intros').append('<p id="africanIntro">In the African countries we find more goodwill in general, especially towards the United States. The American economic model continues to be preferred, but strong support exists only in a few countries like Kenya and Senegal.Click continue to explore the data on your own<br><button id="continue">Continue</button></p>');
-
-		$('#continue').on('click', function() {
-			
-			$('#africanIntro').remove();
-			selector.appendTo('#countries');
-		})
-		//function to handle "select all"
-		d3.select('.selectAllCountries').on('click', function () {
-			
-			$('input[type=checkbox]').each(function () {
-				$(this).prop("checked", true);
-
-			})
-			countriesToInclude = allCountries;
-			loadData(data)
-
-		})
-
-			//function to handle "select none"
-
-			d3.select('.selectNoCountries').on('click', function () {
-				$('input[type=checkbox]').each(function () {
-					$(this).prop("checked", false);
-			})
-			countriesToInclude = []
-			loadData(data)
-		})
-
-		
-
-		//function for selecting groups of countries
-		d3.selectAll('.multiSelector').on('click', function () {
-			currentArray = regions[this.id];
-			
-			$('input[type=checkbox]').each(function () {
-				if (jQuery.inArray(this.name, currentArray) != -1) {
-					$(this).prop("checked", true);
-					} 
-			})
-			countriesToInclude = countriesToInclude.concat(currentArray);
-			loadData(data);
-		})
-
-			
-
-			
-		//every time a box is checked, make the new chart
-		d3.selectAll('input[class="country"').on('click', function () {
-			
-
-			d3.selectAll("svg").remove();
-			
-			//get list of countriresToInclude
-			if (this.checked) {
-				countriesToInclude.push(this.name);
-				
-
-			} else {
-				var index = jQuery.inArray(this.name, countriesToInclude);
-				countriesToInclude.splice(index, 1);
-			}
-
-			//make charts again based on most recent click
-			loadData(data)
-			
-		})
-
-
-		
-	})
 	
-
-	})
+	 }
 
 	//chart making function
-	var loadData = function (data) {
+	var makeCharts = function (data, countriesToInclude) {
+			
+			//if function has been passed an array of countries to use, use it, otherwise build the array from the checked boxes
+			if (typeof countriesToInclude === 'undefined') {countriesToInclude = [];}
+
+			if (countriesToInclude.length == 0) {
+
+				d3.selectAll('.country').each(function () {
+					if (this.checked == true) {
+					countriesToInclude.push(this.name);
+					}
+				})
+			}	
+			
 			d3.selectAll("svg").remove();
 
+			
+			//check the boxes and build the countriesToInclude variable
+
+			
+			
+			
 			//create svg to contain the charts
 			var mainWidth = 1400
 			var mainHeight = 350 + (210 * countriesToInclude.length)
@@ -310,7 +312,6 @@ $(document).ready(function() {
 		    myChart.draw(1000);
 
 		    //make the legend squares a little bigger
-		    var test = 150;
 		    d3.selectAll('.dimple-legend-key')
 		    	.attr("height", 18)
 		    	.attr("width", 15);
