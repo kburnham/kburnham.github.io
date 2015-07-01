@@ -4,9 +4,9 @@ $(document).ready(function() {
 
 	//define regional groups for "Add all . . . "
 	var euroCountries = ["Germany", "France", "Spain", "Britain", "Italy", "Poland", "Russia", "Greece", "Czech Republic"];
-	var asiaCountries = ["Australia", "Indonesia", "Japan", "Malaysia", "Pakistan", "Philippines", "South Korea", "Turkey"];
+	var asiaCountries = ["Indonesia", "Japan", "Malaysia", "Pakistan", "Philippines", "South Korea", "Turkey"];
 	//var muslimCountries = ["Pakistan", "Egypt", "Indonesia", "Tunisia", "Turkey", "Jordan", "Palestinian territories"];
-	var latinamericanCountries = ["Agentina", "Bolivia", "Brazil", "Chile", "El Salvador", "Mexico", "Venezuela"];
+	var latinamericanCountries = ["Argentina", "Bolivia", "Brazil", "Chile", "El Salvador", "Mexico", "Venezuela"];
 	var africanCountries = ["Ghana", "Kenya", "Nigeria", "Senegal", "South Africa", "Tunisia", "Egypt", "Uganda"];
 
 	//put the regional groups in an associative array together
@@ -18,19 +18,59 @@ $(document).ready(function() {
 					"latinamericanCountries" : "Latin American Countries", "africanCountries" : "African Countries"};
 
 
-	
+	var nextCount = 0;
 	//generate a checkbox for each of the countries in the data file
 	d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
 
-		makeSelector(data);
+		//makeSelector(data);
 
-		//d3.select("#countryChooser").remove()
+		
+
 		
 		//make charts for the first time. countriesToInclude is hard coded above
 		makeCharts(data, muslimCountries);
 
+		//when next is clicked, show the Latin American countries
+		d3.select("#next1").on('click', function () {
+			if (nextCount == 0) {
+			d3.select("#muslimIntro").remove();
+			d3.select("#intros")
+				.append("p")
+					.attr("id", "laIntro")
 
+					.text("In the Latin American countries we find that support for the American economic model is much stronger than for the Chinese one. \
+					In all of these countries but Argentina we find a majority expressing a favorable opinion of the United States with Chile and El Salvador \
+					particularly strong. ");
+			
+			makeCharts(data, latinamericanCountries);
+			nextCount += 1;
+		} else {
+			//get rid of intro and next button, add the countryChooser
+			d3.select("#laIntro").remove();
+			d3.select("#next1").remove();
+			makeSelector(data);
+			eventHandlers(data);
+
+		}
+	}
+)		//after next again clear the Latin America text and make the selector
+		// d3.select("#intros").on('click', '#next2', function () {
+		// 	d3.select("#laIntro").remove();
+		// })
+
+		
+		//I need to select the 'next2' button but don't seem to be able to since it is dynamically created
+		
+		
+				
+			
 		//function to handle "select all"
+				
+		
+		})
+	
+	
+	var eventHandlers = function (data) {
 		d3.select('#selectAll').on('click', function () {
 			d3.selectAll(".country")
 				.property('checked', true);
@@ -66,43 +106,13 @@ $(document).ready(function() {
 		//submit and make charts
 		d3.select('#submit').on('click', function () {
 			makeCharts(data)
+
 		})
-
-			
-
-			
-		//every time a box is checked, make the new chart
-		// d3.selectAll('input[class="country"').on('click', function () {
-			
-
-		// 	d3.selectAll("svg").remove();
-			
-		// 	//get list of countriresToInclude
-		// 	if (this.checked) {
-		// 		countriesToInclude.push(this.name);
-				
-
-		// 	} else {
-		// 		var index = jQuery.inArray(this.name, countriesToInclude);
-		// 		countriesToInclude.splice(index, 1);
-		// 	}
-
-		// 	//make charts again based on most recent click
-			
-			
-		// })
-
-
-		
-	})
+	}
 	
-
-	
-
 	var makeSelector = function (data) {
 		var allCountries = dimple.getUniqueValues(data, "country");
 		for (i = 0; i < allCountries.length; i++) {
-			//$('div[id="countryCheckBoxes"]').append('<input class="country" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
 			d3.select('#countryCheckBoxes')
 				.append('label')
 					.text(allCountries[i])
@@ -160,11 +170,6 @@ $(document).ready(function() {
 					;
 		}
 		
-
-
-		
-			
-	
 	 }
 
 	//chart making function
