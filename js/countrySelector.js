@@ -40,7 +40,7 @@ $(document).ready(function() {
 
 					.text("In the Latin American countries we find that support for the American economic model is much stronger than for the Chinese one. \
 					In all of these countries but Argentina we find a majority expressing a favorable opinion of the United States. El Salvador \
-					stand out for its remarkable lack of cynicism regarding both the US and China while Argentina is at the other end of the spectrum.");
+					stands out for its remarkable lack of cynicism regarding both the US and China while Argentina is at the other end of the spectrum.");
 			
 			makeCharts(data, latinamericanCountries);
 			nextCount += 1;
@@ -51,7 +51,7 @@ $(document).ready(function() {
 			d3.select("#intros")
 				.append("p")
 				.text("Now you can explore the data on your own. Use the check boxes  to choose countries to include with the charts. \
-					To add groups of countries from a given region use the buttons below. When you are ready to view the charts, click 'Submit')")
+					To add groups of countries from a given region use the buttons below. When you are ready to view the charts, click 'Submit'")
 			d3.select("#note").append("p")
 				.style("font-size", "10px")
 				.text("Note: not all questions were asked in all countries.")
