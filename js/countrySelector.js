@@ -51,7 +51,7 @@ $(document).ready(function() {
 			d3.select("#intros")
 				.append("p")
 				.text("Now you can explore the data on your own. Use the check boxes  to choose countries to include with the charts. \
-					To add groups of countries from a given region use the buttons below. When you are ready to view the charts, click 'Submit'")
+					To add groups of countries from a given region use the buttons below. When you are ready to view the charts, click 'Submit'.")
 			d3.select("#note").append("p")
 				.style("font-size", "10px")
 				.text("Note: not all questions were asked in all countries.")
