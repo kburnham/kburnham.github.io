@@ -1,6 +1,6 @@
 #countryCheckBoxes {
-    -webkit-column-count: 8; /* Chrome, Safari, Opera */
-    -moz-column-count: 8; /* Firefox */
+    -webkit-column-count: 8; 
+    -moz-column-count: 8;
     column-count: 8;
     
 }

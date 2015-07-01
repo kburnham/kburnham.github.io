@@ -21,10 +21,24 @@ $(document).ready(function() {
 	
 	//generate a checkbox for each of the countries in the data file
 	d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
-
 		var allCountries = dimple.getUniqueValues(data, "country");
 		for (i = 0; i < allCountries.length; i++) {
-			$('div[id="countryCheckBoxes"]').append('<input class="country" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
+			//$('div[id="countryCheckBoxes"]').append('<input class="country" type="checkbox" name="' + allCountries[i] + '">' + allCountries[i] + '</input><br>');
+			d3.select('#countryCheckBoxes')
+				.append('label')
+					.text(allCountries[i])
+
+				.append("input")
+					.attr("class", "country")
+					.attr("name", allCountries[i])
+					.attr("type", "checkbox");
+			d3.select('#countryCheckBoxes')
+				.append("br");
+
+
+
+				
+
 		}
 
 
@@ -56,7 +70,7 @@ $(document).ready(function() {
 		//make charts for the first time. countriesToInclude is hard coded above
 		loadData(data)
 
-		var selector = $('#countryChooser').detach();
+		//var selector = $('#countryChooser').detach();
 		
 		$('#next1').on('click', function() {
 
