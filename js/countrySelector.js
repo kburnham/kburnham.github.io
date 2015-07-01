@@ -204,7 +204,7 @@ $(document).ready(function() {
 			
 			//create svg to contain the charts
 			var mainWidth = 1200
-			var mainHeight = 350 + (210 * countriesToInclude.length)
+			var mainHeight = 450 + (220 * countriesToInclude.length)
 			var svg = dimple.newSvg("#chartContainer", mainWidth, mainHeight);
 
 			
