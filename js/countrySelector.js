@@ -35,23 +35,53 @@ $(document).ready(function() {
 			d3.select('#countryCheckBoxes')
 				.append("br");
 
-
-
-				
-
 		}
+
+		d3.select('#submitButton')
+				.append('button')
+					.attr("id", "submit")
+					.text("Submit")
+				;
 
 
 	//add buttons for select all and deselect all
-		$('div[id="multiSelectors"]').append('<button class="selectAllCountries" type="button" name = "Select All">Select All</button>');
-		$('div[id="multiSelectors"]').append('<button class="selectNoCountries" type="button" name = "Select None">Clear All</button><br>	');
+		d3.select("#multiSelectors")
+			
+			.append('button')
+				.attr("id", "selectAll")
+				.attr("type", "button")
+				.text("Select All")
+				;
+		
+
+		d3.select("#multiSelectors")
+			.append('button')
+				.attr("id", "selectNone")
+				//.attr("type", "button")
+				.text("Clear All")
+				;
+		
 
 		//add buttons to select all members of regional groups
-		$('div[id="multiSelectors"]').append('<p>Add all . . .</p>');
-		for (var key in regions) {
-			$('div[id="multiSelectors"]').append('<button class="multiSelector" type="button" id = ' + key + '>' + names[key] + '</button>');
-			$('div[id="multiSelectors"]').append('<div class="divider"/>');
+		d3.select("#multiSelectors")
+			.append('p')
+				.text("Add all . . .")
+				
+			.append('br')
+			;
+
+		for (var region in regions) {
+			d3.select("#multiSelectors")
+				.append('button')
+					.attr("class", "multiSelector")
+					.attr("id", region)
+					.text(names[region])
+					;
 		}
+		
+
+
+		
 			
 		//precheck some boxes
 		$('input[type=checkbox]').each(function () {
