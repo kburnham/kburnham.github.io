@@ -17,5 +17,26 @@
 	font-family: Arial;
 }
 
+#submitButton {
+	text-align: center;
+
+}
 
 
+
+.divider {
+	width: 20px;
+
+}
+
+#multiSelectors {
+	text-align: center;
+}
+
+button {
+	padding: 5px;
+}
+
+#intros {
+	height: 80px
+}

@@ -39,8 +39,8 @@ $(document).ready(function() {
 					.attr("id", "laIntro")
 
 					.text("In the Latin American countries we find that support for the American economic model is much stronger than for the Chinese one. \
-					In all of these countries but Argentina we find a majority expressing a favorable opinion of the United States with Chile and El Salvador \
-					particularly strong. ");
+					In all of these countries but Argentina we find a majority expressing a favorable opinion of the United States. El Salvador \
+					stand out for its remarkable lack of cynicism regarding both the US and China while Argentina is at the other end of the spectrum.");
 			
 			makeCharts(data, latinamericanCountries);
 			nextCount += 1;
@@ -48,26 +48,22 @@ $(document).ready(function() {
 			//get rid of intro and next button, add the countryChooser
 			d3.select("#laIntro").remove();
 			d3.select("#next1").remove();
+			d3.select("#intros")
+				.append("p")
+				.text("Now you can explore the data on your own. Use the check boxes  to choose countries to include with the charts. \
+					To add groups of countries from a given region use the buttons below. When you are ready to view the charts, click 'Submit')")
+			d3.select("#note").append("p")
+				.style("font-size", "10px")
+				.text("Note: not all questions were asked in all countries.")
 			makeSelector(data);
 			eventHandlers(data);
 
-		}
-	}
-)		//after next again clear the Latin America text and make the selector
-		// d3.select("#intros").on('click', '#next2', function () {
-		// 	d3.select("#laIntro").remove();
-		// })
-
-		
-		//I need to select the 'next2' button but don't seem to be able to since it is dynamically created
-		
-		
-				
+				}
 			
-		//function to handle "select all"
+		})		
 				
 		
-		})
+	})
 	
 	
 	var eventHandlers = function (data) {
@@ -125,6 +121,8 @@ $(document).ready(function() {
 				.append("br");
 
 		}
+		d3.select("#countryCheckBoxes")
+			.append('br');
 
 		d3.select('#submitButton')
 				.append('button')
@@ -132,6 +130,7 @@ $(document).ready(function() {
 					.attr("id", "submit")
 					.text("Submit")
 				;
+		
 
 
 	//add buttons for select all and deselect all
@@ -142,6 +141,9 @@ $(document).ready(function() {
 				.attr("type", "button")
 				.text("Select All")
 				;
+		d3.select('#multiSelectors')
+			.append('div')
+				.attr("class", "divider");
 		
 
 		d3.select("#multiSelectors")
@@ -150,14 +152,16 @@ $(document).ready(function() {
 				.attr("type", "button")
 				.text("Clear All")
 				;
+		d3.select("#multiSelectors")
+			.append('br');
 		
 
 		//add buttons to select all members of regional groups
 		d3.select("#multiSelectors")
-			.append('p')
-				.text("Add all . . .")
+			
 				
 			.append('br')
+
 			;
 
 		for (var region in regions) {
@@ -168,6 +172,9 @@ $(document).ready(function() {
 					.attr("type", "button")
 					.text(names[region])
 					;
+			d3.select("#multiSelectors")
+				.append("div")
+					.attr("class", "divider");
 		}
 		
 	 }
@@ -196,7 +203,7 @@ $(document).ready(function() {
 			
 			
 			//create svg to contain the charts
-			var mainWidth = 1400
+			var mainWidth = 1200
 			var mainHeight = 350 + (210 * countriesToInclude.length)
 			var svg = dimple.newSvg("#chartContainer", mainWidth, mainHeight);
 
