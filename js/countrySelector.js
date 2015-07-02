@@ -1,4 +1,4 @@
-$(document).ready(function() {
+window.onload = function() {
 	//hard code countries to include in starter charts
 	var muslimCountries = ["Pakistan", "Egypt", "Indonesia", "Tunisia", "Turkey"];
 
@@ -341,4 +341,4 @@ $(document).ready(function() {
 		    } , this)
 		}
 	
-})
+}
