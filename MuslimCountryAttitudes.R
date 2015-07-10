@@ -16,43 +16,55 @@ setwd("/Users/kb/Documents/MOOCs/datascience/DataVis/FinalProject_DV/kburnham.gi
 data <- as.data.set(spss.system.file("Pew Research Global Attitudes Project Spring 2013 Dataset for web.sav"))
 data <- as.data.frame(data)
 
-#list of large, predominantly Muslim countries in the Pew data. 
-#we exlude Lebanon (small and large non-Muslim population), Palestinian territories(very small)
-#and Mayalsia (large non-Muslim population)
+#write.table(final.data, "muslim.attitudes.to.USA.China.tsv", sep = "\t", col.names = NA)
 
-#muslim.countries <- c("Egypt", "Jordan", "Indonesia", "Turkey", "Pakistan", 
-                     "Tunisia")
+#remove US and China
 
-#create list of European and Latin American countries to create 
-# 
-# euro.countries <- c("Britain", "Czech Republic", "France", "Germany", "Greece", "Italy", "Poland",
-#                     "Russia", "Spain")
-# la.countries <- c("Argentina", "Bolivia", "Brazil", "Chile", "El Salvador", "Mexico", "Venezuela")
+data <- subset(data, country != "United States")
+data <- subset(data, country != "China")
+##create a region variable and assign each row of data to a region based on country
+
+americas <- c("Canada", "Argentina", "Bolivia", "Brazil", "Chile", "El Salvador", 
+              "Mexico", "Venezuela" )
+europe <- c("Spain", "Czech Republic", "France", "Germany", "Spain", "Russia", 
+            "Britain", "Greece", "Poland", "Italy")
+asia <- c("South Korea", "Australia", "Turkey", "Lebanon", "Japan", "Malaysia", 
+          "Indonesia", "Philippines", "Pakistan", "Palestinian territories")
+africa <- c("Egypt", "Senegal", "Nigeria", "Kenya", "Uganda", "Jordan", "Tunisia", 
+            "Ghana", "South Africa", "Israel")
+
+
 
 ##now create a variable for "Muslim", "Euro", "LA", "other"
 
-# data$region <- "other"
-# data$region[data$country %in% muslim.countries] <- "Muslim"
-# data$region[data$country %in% euro.countries] <- "Euro"
-# data$region[data$country %in% la.countries] <- "LA"
-# data$region <- as.factor(data$region)
-# summary(data$region)
+data$region <- NA
+data$region[data$country %in% americas] <- "Americas"
+data$region[data$country %in% europe] <- "Europe"
+data$region[data$country %in% asia] <- "Asia/Pacific"
+data$region[data$country %in% africa] <- "Africa"
+data$region <- as.factor(data$region)
+summary(data$region)
 
-##remove all 'other'
-#data <- subset(data, region != "other")
+#add a 'religion' category indicating the predominant religion in a given country
 
-##actually I think I want the country to be "Euro" or "LA"
+christian <- c("Czech Republic", "South Korea", "Canada", "France", "Germany", "Spain", 
+              "Mexico", "Chile", "Australia", "Russia", "Britain", "Greece", "Poland",
+              "Italy", "Brazil", "Kenya", "Uganda", "Argentina", "Philippines",
+              "Ghana", "South Africa", "Bolvia", "Venezuela", "El Salvador")
+muslim <- c("Turkey", "Egypt", "Senegal", "Lebanon", "Nigeria", "Malaysia", "Indonesia", 
+            "Jordan", "Tunisia", "Pakistan", "Palestinian territories")
+budhist <- c("Japan")
+jewish <- c("Israel")
 
-#add new levels to country
-#data$country <- factor(data$country, levels = c(levels(data$country), "Europe", "Latin America"))
+data$main.religion <- "Other"
+data$main.religion[data$country %in% christian] <- "Christian"
+data$main.religion[data$country %in% muslim] <- "Muslim"
+data$main.religion[data$country %in% budhist] <- "Buddhist"
+data$main.religion[data$country %in% jewish] <- "Jewish"
+data$main.religion <- as.factor(data$main.religion)
+summary(data$main.religion)
 
-#non-Muslim countries are treated as regional groups 
-#data$country[data$country %in% euro.countries] <- "Europe"
-#data$country[data$country %in% la.countries] <- "Latin America"
 
-
-
-#subset to the questions we are interested in - those that deal with USA and China
 
 questions = c("psraid", "country", "phonetype", "q9a", "q9c", "q11a", "q11b", "q25", "q29", "q30", "q47", "q59", "q119", "q120", "q127b", "q127c", "q174", "q175", "q178")
 data <- data[questions]
