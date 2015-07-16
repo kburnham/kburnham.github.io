@@ -2,8 +2,8 @@ window.onload = function() {
 	var next_count = 0;
 	//I want to start by making one chart from one question
 	d3.csv("../new_site/Pew_Data_2.csv", function (data) {
-			//make text for three pages 1) by religion, 2) by Sunni Shia, 3) by devout/less devout 4) Muslim countries
-		
+
+		//text for the pages
 		var sectText = "Given current events in Pakistan, Syria, Yemen and the frosty relationship between Sunni Saudi Arabia and Shi'a Iran, \
 		we might expect to find differences in how individuals from Islam's two major sects view the US and China. However, the data show very \
 		few differences. There does not appear to be a difference, at least in these data, between how Sunnis and Shi'a answer these questions.";
@@ -16,12 +16,10 @@ window.onload = function() {
 		are based more on local and regional factors than on explicitly religious ones.";
 		var loadText = "Please wait while the data are loaded . . .";
 
-		
-
-
-
+		//make the first set of charts based on religion
 		makeCharts(data, 'religion');
 
+		//make the button handler
 		d3.select('#next1').on('click', function () {
 			if (next_count == 0) {
 				//change text to sectText
@@ -69,11 +67,6 @@ window.onload = function() {
 				data = dimple.filterData(data, category, valuesToInclude);
 
 			}
-			
-
-			
-
-			//check the boxes and build the countriesToInclude variable
 
 			//create svg to contain the charts
 			var mainWidth = 1600
@@ -81,17 +74,12 @@ window.onload = function() {
 			var svg = dimple.newSvg("#chartContainer", mainWidth, mainHeight);
 
 			//create a second svg for the pie chart
-
 			var pieWidth = 250;
 			var pieHeight = 150;
 			var svg2 = dimple.newSvg("#pieContainer", pieWidth, pieHeight);
 
-
-			
-
 			//get a unique list of questions
 			var questions = dimple.getUniqueValues(data, "Question");
-
 			
 			//set the bounds for the subcharts
 		    var row = 0,
@@ -103,11 +91,7 @@ window.onload = function() {
 		    height = 75	 * 4,
 		    totalWidth = mainWidth
 
-		    
-
-
-
-		    //draw a chart for each of the 6 questions
+			 //draw a chart for each of the 6 questions
 		    questions.forEach(function (question) {
 		    	
 		    // if the next subchart would go off the edge, move up a row
@@ -126,9 +110,6 @@ window.onload = function() {
 		      .rollup(function(v) { return d3.mean(v, function(d) { return d.Score; }); })
 		      .map(subchartData)
 
-		    
-
-
 		    //convert the data to a flat JSON table so that dimple.js can use it
 		    var newChartData = []
 		    for (x in groupedData) {
@@ -142,7 +123,6 @@ window.onload = function() {
 		    	}
 		    }
 
-		    
 		    //make dataset for the pie charts, we want counts of each value in category
 		    var counts = d3.nest()
 		    //.key(function(d) {return d.psraid;})
@@ -150,18 +130,15 @@ window.onload = function() {
 			.rollup(function(v) { return v.length / 2; })
 		    .entries(subchartData)
 
-		  
-	    	//eliminate the NAs
+		    //eliminate the NAs
 	    	countData = [];
 	    	for (x in counts) {
 	    		if (counts[x].key == "") {continue;}
 	    	countData.push(counts[x]);
 	    	}
 		    
-		    
-			//assign question text
-
-		    switch (question) {
+		    //assign question text
+            switch (question) {
 		      case "favorable":
 		        var questionText = "Do you have a favorable opinion of USA/China?";
 		        break;
@@ -203,8 +180,6 @@ window.onload = function() {
 		        height);
 
 		    //make the piechart on the first pass only
-		    
-
 		    var x = myChart.addMeasureAxis("x", "avg.Score");
 		    x.overrideMax = 1;
 		    x.showGridlines = false;
@@ -221,18 +196,15 @@ window.onload = function() {
 		    myChart.defaultColors = [
 		    new dimple.color("#FF6961", "#FF6961", 1), // China
 		    new dimple.color("#779ECB", "#779ECB", 1), // USA
-		      
-		      
 		    ];
 
-	    	//add legend to first chart only
+	    	//add legend to first column only
 		    if (col == 0) {
 		      myLegend = myChart.addLegend(365,50 + ((height + 70) * row),500,50);
 		    }
 		    myLegend.fontSize = 14;
 		    myLegend.fontFamily = "helvetica";
 		    
-
 		    //alter the tooltip text
 		    s.getTooltipText = function (e) {
 		            return [
@@ -242,7 +214,7 @@ window.onload = function() {
 		                Math.round(e.aggField[0] * 100) + "%", //display % in 2 digits (e.g. 53%)
 	                	questionText
 		            ];
-		        };
+		    };
 
 		    if (row ==0 & col == 0){
 		    	//remove the loading text
@@ -250,36 +222,23 @@ window.onload = function() {
 		    }
 		    myChart.draw(1000);
 
-		    //make the legend squares a little bigger
-		    // d3.selectAll('.dimple-custom-format-2')
-		    // 	.attr("height", 18)
-		    // 	.attr("width", 15);
-		    	//.attr("x", this.x + 20);
-		    // d3.selectAll('.dimple-bar')
-		    //  	.attr("height", 20);
-
-		    									;
-		    
-
 		    y.titleShape.remove();
 		    x.titleShape.remove();
+
+		    //make the pie chart, but not for the countries
 		    if (category != 'country') {
 		        if (row ==0 & col ==0){
-		    	//make the pie chart
+		    	
 		    	    var pieChart = new dimple.chart(svg, countData);
-		    	//need to rollup the data again to get counts
 		    	    pieChart.setBounds(850, 20, pieWidth, pieHeight);
 		    	    pieChart.addMeasureAxis("p", "values");
 			    	pieChart.addSeries("key", dimple.plot.pie);
 			    	pieChart.addLegend(1080, 30, 50, 200, "left");
 			    	pieChart.draw()
-		    	
-
-
-		        }
+		    	}
 		    }
 
 		    col += 1;
 		    } , this)
-		}
+	}
 }
