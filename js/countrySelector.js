@@ -17,17 +17,11 @@ window.onload = function() {
 	var names = {"euroCountries" : "European Countries", "asiaCountries" : "Asian Countries", "muslimCountries" : "Muslim Countries",
 					"latinamericanCountries" : "Latin American Countries", "africanCountries" : "African Countries"};
 
-
-	var nextCount = 0;
+    var nextCount = 0;
 	//generate a checkbox for each of the countries in the data file
 	d3.tsv("/muslim.attitudes.to.USA.China.tsv", function (data) {
 
-		//makeSelector(data);
-
-		
-
-		
-		//make charts for the first time. countriesToInclude is hard coded above
+        //make charts for the first time with Muslim countries
 		makeCharts(data, muslimCountries);
 
 		//when next is clicked, show the Latin American countries
@@ -44,25 +38,22 @@ window.onload = function() {
 			
 			makeCharts(data, latinamericanCountries);
 			nextCount += 1;
-		} else {
+		    } else {
 			//get rid of intro and next button, add the countryChooser
 			d3.select("#laIntro").remove();
 			d3.select("#next1").remove();
 			d3.select("#intros")
 				.append("p")
 				.text("Now you can explore the data on your own. Use the check boxes  to choose countries to include with the charts. \
-					To add groups of countries from a given region use the buttons below. When you are ready to view the charts, click 'Submit'.")
+					To add groups of countries from a given region use the buttons below. When you are ready to view the charts, click 'Submit'.");
 			d3.select("#note").append("p")
 				.style("font-size", "10px")
-				.text("Note: not all questions were asked in all countries.")
+				.text("Note: not all questions were asked in all countries.");
 			makeSelector(data);
 			eventHandlers(data);
 
-				}
-			
+			}
 		})		
-				
-		
 	})
 	
 	
@@ -78,12 +69,7 @@ window.onload = function() {
 			d3.selectAll(".country")
 				.property('checked', false);
 		})
-
-	
 		
-
-		
-
 		//function for selecting groups of countries
 		d3.selectAll('.multiSelector').on('click', function () {
 			
